@@ -5,7 +5,7 @@ author:
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
 description: >
-  This is Ashutosh Jha's personal website.
+  This website documents the academic and professional endeavours of Mr. Ashutosh Jha. Ashutosh hails from New Delhi, India. He is an engineer at heart and loves to apply quantitative methods to interdiscplinary problems. Recently, he has been learning all about quantitative methods in statistics and their application in the fields of machine learning, econometrics and psychometrics at the Eberhard Karls University of Tuebingen, Germany. 
 
 # Build settings
 
@@ -17,8 +17,15 @@ plugins:
 
 # Theme-specific settings
 
+header_pages:
+  - about.md
+
+# Set to `true` to show excerpts on the homepage.
+#
+#show_excerpts: true
+
 minima:
-  skin: dark
+  skin: classic
   # Minima date format.
   # Refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this.
   #
@@ -26,7 +33,7 @@ minima:
 
   # Generate social links in footer.
   #
-social_links:
+  social_links:
   #   - { platform: devto,          user_url: "https://dev.to/jekyll" }
   #   - { platform: dribbble,       user_url: "https://dribbble.com/jekyll" }
   #   - { platform: facebook,       user_url: "https://www.facebook.com/jekyll" }
@@ -35,7 +42,7 @@ social_links:
   #   - { platform: google_scholar, user_url: "https://scholar.google.com/citations?user=qc6CJjYAAAAJ" }
   #   - { platform: instagram,      user_url: "https://www.instagram.com/jekyll" }
   #   - { platform: keybase,        user_url: "https://keybase.io/jekyll" }
-  - { platform: linkedin,       user_url: "https://www.linkedin.com/in/ashutosh-jha-47554ab1/" }
+    - { platform: linkedin,       user_url: "https://www.linkedin.com/in/ashutosh-jha-47554ab1/" }
   #   - { platform: microdotblog,   user_url: "https://micro.blog/jekyll" }
   #   - { platform: pinterest,      user_url: "https://www.pinterest.com/jekyll" }
   #   - { platform: stackoverflow,  user_url: "https://stackoverflow.com/users/1234567/jekyll" }
@@ -45,10 +52,3 @@ social_links:
 
 # If you want to link only specific pages in your header, uncomment this and add the path to the pages in
 # order as they should show up.
-#
-header_pages:
-   - about.md
-
-# Set to `true` to show excerpts on the homepage.
-#
-# show_excerpts: false
