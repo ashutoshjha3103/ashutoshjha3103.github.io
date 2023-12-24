@@ -5,7 +5,7 @@ author:
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
 description: >
-  This website documents the academic and professional endeavours of Mr. Ashutosh Jha. Ashutosh hails from New Delhi, India. He is an engineer at heart and loves to apply quantitative methods to interdiscplinary problems. Recently, he has been learning all about quantitative methods in statistics and their application in the fields of machine learning, econometrics and psychometrics at the Eberhard Karls University of Tuebingen, Germany. 
+        This website documents the academic and professional endeavours of Mr. Ashutosh Jha. 
 
 # Build settings
 
