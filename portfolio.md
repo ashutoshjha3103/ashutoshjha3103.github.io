@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Home
-permalink: /
+permalink: /portfolio/
 ---
 
 This is the Home Page for Ashutosh Jha's projects, ideas, and associated github repositories.
