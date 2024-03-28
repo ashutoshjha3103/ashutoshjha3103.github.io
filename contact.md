@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Ashutosh Jha Contact
+title: Contact
 permalink: /contact/
 ---
 

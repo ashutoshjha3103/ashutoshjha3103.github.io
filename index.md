@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Ashutosh Jha - Home
+title: Home
 permalink: /home/
 ---
 
