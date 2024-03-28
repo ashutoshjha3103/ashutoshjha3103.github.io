@@ -4,5 +4,7 @@ title: Contact
 permalink: /contact/
 ---
 
-This is for Ashutosh's contact information like his linkedin.
+## Connect with me on LinkedIn
+
+[![LinkedIn](https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/linkedin.svg)](https://www.linkedin.com/in/ashutosh-jha-47554ab1/)
 
