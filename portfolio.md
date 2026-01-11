@@ -62,16 +62,16 @@ permalink: /portfolio/
 a.card-link { text-decoration: none; color: inherit; }
 </style>
 
-<p>Here is a selection of my academic and technical projects in Financial Engineering, Econometrics, and Machine Learning.</p>
+<p>Here is a selection of my academic and technical projects:</p>
 
 <div class="project-grid">
 
 <div class="project-card">
   <div>
     <div class="project-title">Optimal Transport in Linear ICA</div>
-    <div class="project-meta">Master Thesis @ MPI for Intelligent Systems</div>
+    <div class="project-meta">Master Thesis @ MPI for Intelligent Systems and University of Tübingen</div>
     <div class="project-desc">
-      Research applying optimal transport theory to solve problems in linear Independent Component Analysis (ICA).
+      Ongoing Research into applying optimal transport theory to linear Independent Component Analysis (ICA). Git repository access provided on request.
       <br><br>
       <em>Supervisors: Dr. Simon Buchholz, Prof. Dr. Michel Besserve, Prof. Dr. Joachim Grammig</em>
     </div>
@@ -86,13 +86,13 @@ a.card-link { text-decoration: none; color: inherit; }
 <div class="project-card">
   <div>
     <div class="project-title">Structured Product Design (Bonus Certificate)</div>
-    <div class="project-meta">KU Leuven (Financial Engineering)</div>
+    <div class="project-meta">KU Leuven (Course: Financial Engineering)</div>
     <div class="project-desc">
       Designed, priced, and hedged a Bonus Certificate linked to Costco (COST). Used the <strong>Bates Model</strong> (stochastic volatility + jumps) with a two-stage calibration and Monte Carlo simulation for path-dependent payoff pricing.
     </div>
   </div>
   <div class="project-links">
-    <a href="https://github.com/ashutoshjha3103/exotic_option_pricing-fe2025">
+    <a href="https://github.com/ashutoshjha3103/exotic_option_pricing_fe2025">
       <img src="https://img.shields.io/badge/GitHub-View_Project-blue?logo=github" alt="View on GitHub">
     </a>
   </div>
@@ -101,7 +101,7 @@ a.card-link { text-decoration: none; color: inherit; }
 <div class="project-card">
   <div>
     <div class="project-title">Probabilistic Asset Pricing</div>
-    <div class="project-meta">University of Tübingen</div>
+    <div class="project-meta">Master Seminar @ University of Tübingen</div>
     <div class="project-desc">
       Developed a Bayesian framework for estimating stock risk premia. Integrated the hybrid model of Grammig et al. (2024) with forward-looking measures from Martin & Wagner (2019) using <strong>Kalman Filtering</strong> and the EM algorithm.
       <br><br>
@@ -117,8 +117,8 @@ a.card-link { text-decoration: none; color: inherit; }
 
 <div class="project-card">
   <div>
-    <div class="project-title">Empirical Asset Pricing: CBM vs UCCAPM</div>
-    <div class="project-meta">University of Tübingen</div>
+    <div class="project-title">A Comparative Study of CBM and UCCAPM</div>
+    <div class="project-meta">University of Tübingen (Empirical Asset Pricing)</div>
     <div class="project-desc">
       Comparative analysis of Consumption-Based (CBM) and Ultimate Consumption (UCCAPM) models on 25 Fama-French portfolios. Investigated model performance during COVID-19 and the impact of lagged consumption adjustment.
     </div>
@@ -133,7 +133,7 @@ a.card-link { text-decoration: none; color: inherit; }
 <div class="project-card">
   <div>
     <div class="project-title">ARMA Process Analysis & Estimation</div>
-    <div class="project-meta">University of Tübingen (Time Series)</div>
+    <div class="project-meta">University of Tübingen (Advanced Time Series Analysis)</div>
     <div class="project-desc">
       Detailed analysis of Conditional Maximum Likelihood (CML) vs Quasi-Maximum Likelihood (QML). Performed simulation studies to test stationarity, efficiency, and robustness of confidence intervals.
     </div>

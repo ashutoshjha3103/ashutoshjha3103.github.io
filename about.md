@@ -178,7 +178,7 @@ permalink: /about/
 <div class="section-title">Education</div>
 
 <div class="cv-item">
-  <div class="cv-role">M.Sc. Quantitative Data Science Methods (Econometrics)</div>
+  <div class="cv-role">M.Sc. Quantitative Data Science Methods</div>
   <div class="cv-meta">
     <span>Eberhard Karls Universität Tübingen, Germany</span>
     <span>Oct 2023 – Present</span>
@@ -186,7 +186,7 @@ permalink: /about/
 </div>
 
 <div class="cv-item">
-  <div class="cv-role">Erasmus Exchange (Financial Economics & ML)</div>
+  <div class="cv-role">Erasmus Exchange (Financial Economics & Machine Learning)</div>
   <div class="cv-meta">
     <span>Katholieke Universiteit Leuven, Belgium</span>
     <span>Feb 2025 – June 2025</span>
