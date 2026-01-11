@@ -156,14 +156,17 @@ permalink: /about/
   <span class="skill-tag">Git</span>
   <span class="skill-tag">Linux</span>
   <span class="skill-tag">Docker</span>
+  <span class="skill-tag">GCP</span>
+  <span class="skill-tag">AWS</span>
 
   <span class="skill-category">Domain Expertise</span>
   <span class="skill-tag">Financial Economics</span>
   <span class="skill-tag">Probabilistic ML</span>
-  <span class="skill-tag">Time Series</span>
+  <span class="skill-tag">Time Series Analysis</span>
   <span class="skill-tag">Econometrics</span>
   <span class="skill-tag">Bayesian Modelling</span>
-  <span class="skill-tag">Optimization</span>
+  <span class="skill-tag">Causal ML</span>
+  <span class="skill-tag">Deep Learning</span>
 </div>
 
 <div class="section-title">My Professional & Academic Journey</div>
@@ -177,7 +180,7 @@ permalink: /about/
       <div class="org-name">Max Planck Institute for Intelligent Systems and University of Tuebingen</div>
       <span class="time-period">Present</span>
       <div class="description">
-        Researching the application of <strong>Optimal Transport theory</strong> to solve problems in linear Independent Component Analysis (ICA).
+        Researching the application of <strong>Optimal Transport theory</strong> to linear Independent Component Analysis (ICA).
         <br>
         <em>Supervisors: Dr. Simon Buchholz, Prof. Dr. Michel Besserve, Prof. Dr. Joachim Grammig</em>
       </div>
@@ -270,7 +273,7 @@ permalink: /about/
       <div class="description">
         <ul>
           <li><strong>IBM Data Science Professional</strong> (Coursera/IBM) <br> <a href="https://coursera.org/verify/professional-cert/87ZBBTJ8QCSL" target="_blank">View Certificate</a></li>
-          <li><strong>Google Cloud Professional Data Engineer</strong> (Expired)<br> <a href="https://www.credential.net/6c937fbd-ba97-4a68-820d-23e16ae1f685?key=b713da8be058129a4efeca42ed03d4efcf7c596ffa8e183b053d84e1964eb574" target="_blank">View Certificate</a></li>
+          <li><strong>Google Cloud Professional Data Engineer</strong> <br> <a href="https://drive.google.com/file/d/1ABUM6Pgmy_tKxYixDMoc6bOV0RdJpawh/view?usp=sharing" target="_blank">View Certificate</a></li>
         </ul>
       </div>
     </div>
