@@ -24,29 +24,37 @@ permalink: /about/
     margin-bottom: 1.5rem;
   }
 
-  /* Experience & Education Cards */
+  /* Experience & Education Cards - UPDATED TO MATCH PORTFOLIO */
   .cv-item {
-    margin-bottom: 2rem;
-    border-left: 3px solid #e1e4e8; /* Left border line */
-    padding-left: 1.5rem;
-    transition: border-color 0.2s;
+    background: #fff;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px; /* Rounded corners */
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   }
   
+  /* Hover effect like Portfolio cards */
   .cv-item:hover {
-    border-left-color: #0366d6; /* Blue highlight on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-color: #0366d6;
   }
 
   .cv-role {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     font-weight: 600;
     color: #24292e;
+    margin-bottom: 0.5rem;
   }
 
   .cv-meta {
     font-size: 0.95rem;
     color: #586069;
-    margin-bottom: 0.75rem;
-    font-style: italic;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    border-bottom: 1px solid #eaecef;
+    padding-bottom: 0.75rem;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -64,7 +72,7 @@ permalink: /about/
   }
   
   .cv-desc li {
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
   }
 
   /* Skill Badges */
