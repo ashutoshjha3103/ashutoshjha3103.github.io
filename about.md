@@ -7,16 +7,12 @@ permalink: /about/
 <style>
 /* --- STYLES --- */
 
-/* Intro Text Box */
+/* Intro Text - Plain Style (No Box) */
 .cv-intro {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   color: #333;
-  margin-bottom: 2rem;
-  background: #f6f8fa;
-  padding: 1.5rem;
-  border-radius: 8px;
-  border-left: 5px solid #0366d6;
+  margin-bottom: 2.5rem;
 }
 
 /* Section Headers */
