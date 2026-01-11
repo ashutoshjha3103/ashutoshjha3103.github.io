@@ -14,6 +14,9 @@
       </label>
 
       <div class="trigger">
+        {%- assign default_paths = site.pages | map: "path" -%}
+        {%- assign page_paths = site.header_pages | default: default_paths -%}
+
         {%- for path in page_paths -%}
           {%- assign my_page = site.pages | where: "path", path | first -%}
           {%- if my_page.title -%}
@@ -54,6 +57,11 @@
   body.dark-theme .page-link {
     color: #f0f0f0;
   }
+  
+  /* Link hover color in dark mode */
+  body.dark-theme a {
+    color: #58a6ff;
+  }
 
   /* Headings */
   body.dark-theme h1, body.dark-theme h2, body.dark-theme h3, 
@@ -93,6 +101,12 @@
   body.dark-theme .section-title {
     color: #fff;
     border-bottom-color: #444;
+  }
+  
+  /* Mobile Menu fix for dark mode */
+  body.dark-theme .site-nav {
+    background-color: #1a1a1a;
+    border-color: #444;
   }
 </style>
 
