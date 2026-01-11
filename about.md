@@ -138,10 +138,10 @@ permalink: /about/
 
 <div class="cv-intro">
   <p>
-    Ashutosh is currently pursuing a Master of Science in Quantitative Data Science Methods at the Eberhard Karls University of Tübingen. He is an engineer at heart, now focused on applying statistics and machine learning to econometrics, finance, and social sciences.
+    Ashutosh is currently pursuing a Master of Science in Quantitative Data Science Methods at the Eberhard Karls University of Tübingen. He is an engineer at heart, now focused on researching Quantitative Methods with applications in Machine Learning Foundations and Financial Economics.
   </p>
   <p style="margin-top: 1rem;">
-    Previously, Ashutosh spent three years as a Software Engineer at HSBC (Global Cloud Economics), where he focused on data engineering and forecasting models. He has also conducted research at the Max Planck Institute for Intelligent Systems and interned at the financial stability of the Deutsche Bundesbank.
+    Previously, Ashutosh spent three years as a Software Engineer at HSBC (Global Cloud Economics), where he focused on data engineering and forecasting models. He has also conducted research at the Max Planck Institute for Intelligent Systems and interned at the financial stability department of the Deutsche Bundesbank. He also participated in an Erasmus Exchange semester at Katholieke Universiteit Leuven in Belgium.
   </p>
 </div>
 
