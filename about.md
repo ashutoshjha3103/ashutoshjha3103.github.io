@@ -75,6 +75,15 @@ permalink: /about/
     margin-bottom: 0.5rem;
   }
 
+  /* Link styling inside description */
+  .cv-desc a {
+    color: #0366d6;
+    text-decoration: none;
+  }
+  .cv-desc a:hover {
+    text-decoration: underline;
+  }
+
   /* Skill Badges */
   .skill-category {
     font-weight: 600;
@@ -134,7 +143,7 @@ permalink: /about/
   </div>
   <div class="cv-desc">
     <ul>
-      <li>Developed and tested computer vision algorithms (emotion and head orientation detection) for the NICE (Non-verbal Interpersonal Communication Exploration) software.</li>
+      <li>Developed and tested computer vision algorithms (emotion and head orientation detection) for the NICE (Non-verbal Interpersonal Communication Exploration) software: <a href="https://github.com/OSLabTools/nicetoolbox" target="_blank">GitHub-NICE</a>.</li>
     </ul>
   </div>
 </div>
