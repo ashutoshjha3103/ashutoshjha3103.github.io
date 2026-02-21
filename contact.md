@@ -7,25 +7,26 @@ permalink: /contact/
 <style>
   .contact-container {
     display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers items horizontally */
-    gap: 1.5rem; /* Space between buttons */
+    flex-direction: row; 
+    justify-content: center; 
+    gap: 2rem; 
     margin-top: 2rem;
   }
 
   .contact-link {
-    text-decoration: none !important; /* Removes underline */
+    text-decoration: none !important; 
     transition: transform 0.2s ease;
   }
 
   .contact-link:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
+    transform: translateY(-5px); 
   }
   
-  /* Make images responsive but capped size */
   .contact-link img {
-    height: 40px; 
-    width: auto;
+    height: 55px; 
+    width: 55px;
+    border-radius: 12px; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
   }
 </style>
 
@@ -36,12 +37,12 @@ permalink: /contact/
 
 <div class="contact-container">
 
-  <a href="https://www.linkedin.com/in/ashutosh-jha-47554ab1/" class="contact-link" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+  <a href="https://www.linkedin.com/in/ashutosh-jha-47554ab1/" class="contact-link" target="_blank" aria-label="LinkedIn">
+    <img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn">
   </a>
 
-  <a href="https://github.com/ashutoshjha3103" class="contact-link" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-Follow_My_Work-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+  <a href="https://github.com/ashutoshjha3103" class="contact-link" target="_blank" aria-label="GitHub">
+    <img src="https://skillicons.dev/icons?i=github" alt="GitHub">
   </a>
 
 </div>
