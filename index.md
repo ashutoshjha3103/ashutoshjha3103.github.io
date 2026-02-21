@@ -16,6 +16,6 @@ permalink: /
 </ul>
 </div>
 <div style="flex-shrink: 0; margin: 0 auto;">
-<img src="/assets/profile.jpg" alt="Ashutosh Jha" style="width: 220px; height: 250px; object-fit: cover; border-radius: 10px; border: 3px solid #e1e4e8; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+<img src="/assets/profile.jpg" alt="Ashutosh Jha" style="width: 220px; height: 250px; object-fit: cover; border-radius: 10px; border: 3px solid #e1e4e8; box-shadow: 0 8px 20px rgba(0,0,0,0.15); padding: 8px;">
 </div>
 </div>
