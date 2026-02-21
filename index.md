@@ -5,7 +5,7 @@ permalink: /
 ---
 
 <div style="display: flex; align-items: center; justify-content: space-between; gap: 3rem; flex-wrap: wrap-reverse; margin-top: 2rem;">
-<div style="flex: 1 1 350px; font-size: 1.05rem; line-height: 1.6;">
+<div style="flex: 1 1 350px; font-size: 1.05rem; line-height: 1.6; text-align: justify;">
 <h3 style="margin-top: 0; font-size: 1.75rem;">Welcome!</h3>
 <p>I am <strong>Ashutosh Jha</strong>, a Quantitative Data Scientist based in Tübingen, Germany.</p>
 <p>An engineer at heart, I specialize in the intersection of <strong>Quantitative Methods</strong>, <strong>Machine Learning</strong> and <strong>Financial Economics</strong>. I leverage a strong foundation in software development to build rigorous, data-driven solutions and research training in my master's degree to further my research objectives.</p>
@@ -16,6 +16,6 @@ permalink: /
 </ul>
 </div>
 <div style="flex-shrink: 0; margin: 0 auto;">
-<img src="/assets/profile.jpg" alt="Ashutosh Jha" style="width: 220px; height: 220px; object-fit: cover; border-radius: 50%; border: 3px solid #e1e4e8; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+<img src="/assets/profile.jpg" alt="Ashutosh Jha" style="width: 220px; height: 250px; object-fit: cover; border-radius: 10px; border: 3px solid #e1e4e8; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
 </div>
 </div>

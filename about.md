@@ -13,6 +13,7 @@ permalink: /about/
   line-height: 1.6;
   color: #333;
   margin-bottom: 2.5rem;
+  text-align: justify;
 }
 
 /* Section Headers */
