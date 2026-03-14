@@ -85,6 +85,21 @@ a.card-link { text-decoration: none; color: inherit; }
 
 <div class="project-card">
   <div>
+    <div class="project-title">NICE Toolbox (Computer Vision & DL)</div>
+    <div class="project-meta">Graduate Research Assistant @ MPI for Intelligent Systems</div>
+    <div class="project-desc">
+      Core contributor to the Nonverbal Interpersonal Communication Exploration (NICE) Toolbox. Implemented <strong>Deep Learning</strong> models for Pose Estimation, Emotion Detection, and Head Orientation. Designed the asset manager for all algorithms network weights and structured the testing and Docker containerization pipelines.
+    </div>
+  </div>
+  <div class="project-links">
+    <a href="https://github.com/OSLabTools/nicetoolbox">
+      <img src="https://img.shields.io/badge/GitHub-View_Project-blue?logo=github" alt="View on GitHub">
+    </a>
+  </div>
+</div>
+
+<div class="project-card">
+  <div>
     <div class="project-title">Structured Product Design (Bonus Certificate)</div>
     <div class="project-meta">KU Leuven (Course: Financial Engineering)</div>
     <div class="project-desc">
