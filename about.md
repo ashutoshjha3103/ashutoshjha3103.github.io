@@ -218,11 +218,11 @@ permalink: /about/
   <div class="timeline-item">
     <div class="timeline-content">
       <span class="badge badge-work">Experience</span>
-      <div class="role-title">Student Research Assistant (Optics & Sensing)</div>
+      <div class="role-title">Graduate Research Assistant (Optics & Sensing)</div>
       <div class="org-name">Max Planck Institute for Intelligent Systems</div>
       <span class="time-period">July 2024 – June 2025</span>
       <div class="description">
-        Developed computer vision algorithms (emotion/head orientation) for <a href="https://nice.is.tue.mpg.de/" target="_blank">NICE Software</a>.
+        Developed computer vision algorithms (emotion/head orientation) for <a href="https://github.com/OSLabTools/nicetoolbox" target="_blank">GitHub NICEToolbox</a>.
       </div>
     </div>
   </div>
