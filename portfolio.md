@@ -71,7 +71,7 @@ a.card-link { text-decoration: none; color: inherit; }
     <div class="project-title">Optimal Transport in Linear ICA</div>
     <div class="project-meta">Master Thesis @ MPI for Intelligent Systems and University of Tübingen</div>
     <div class="project-desc">
-      Ongoing Research into applying optimal transport theory to linear Independent Component Analysis (ICA). Git repository access provided on request.
+      Ongoing Research into applying optimal transport theory to linear Independent Component Analysis (ICA) prolem. Git repository access provided on request.
       <br><br>
       <em>Supervisors: Dr. Simon Buchholz, Prof. Dr. Michel Besserve, Prof. Dr. Joachim Grammig</em>
     </div>
@@ -100,7 +100,7 @@ a.card-link { text-decoration: none; color: inherit; }
 
 <div class="project-card">
   <div>
-    <div class="project-title">Structured Product Design (Bonus Certificate)</div>
+    <div class="project-title">Structured Product Design, Pricing & Hedging (Financial Engineering)</div>
     <div class="project-meta">KU Leuven (Course: Financial Engineering)</div>
     <div class="project-desc">
       Designed, priced, and hedged a Bonus Certificate linked to Costco (COST). Used the <strong>Bates Model</strong> (stochastic volatility + jumps) with a two-stage calibration and Monte Carlo simulation for path-dependent payoff pricing.
@@ -147,7 +147,7 @@ a.card-link { text-decoration: none; color: inherit; }
 
 <div class="project-card">
   <div>
-    <div class="project-title">ARMA Process Analysis & Estimation</div>
+    <div class="project-title">ARMA Process Analysis & Estimation (Time Series Analysis)</div>
     <div class="project-meta">University of Tübingen (Advanced Time Series Analysis)</div>
     <div class="project-desc">
       Detailed analysis of Conditional Maximum Likelihood (CML) vs Quasi-Maximum Likelihood (QML). Performed simulation studies to test stationarity, efficiency, and robustness of confidence intervals.
@@ -162,7 +162,7 @@ a.card-link { text-decoration: none; color: inherit; }
 
 <div class="project-card">
   <div>
-    <div class="project-title">Ripple Down Rules Simulation</div>
+    <div class="project-title">Ripple Down Rules Simulation (Tree-based Algorithm)</div>
     <div class="project-meta">BITS Pilani (APPCAIR Lab)</div>
     <div class="project-desc">
       Implemented a Python simulation for Ripple Down Rules (RDR), a tree-based incremental learning approach.
