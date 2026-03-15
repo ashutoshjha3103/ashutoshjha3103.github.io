@@ -10,7 +10,7 @@ permalink: /
 <p>I am <strong>Ashutosh Jha</strong>, a Quantitative Data Scientist based in Tübingen, Germany.</p>
 <p>An engineer at heart, I specialize at the intersection of Quantitative Methods, Machine Learning, and Financial Economics. I leverage a strong foundation in mathematics, software development and data science to build rigorous, data-driven models with a focus on solving complex challenges within the finance and energy sectors.</p>
 <ul style="padding-left: 1.2rem; margin-top: 1rem; text-align: left;">
-<li style="margin-bottom: 0.5rem;"><a href="/portfolio/" style="font-weight: 600; text-decoration: none;">Check out my projects.</a></li>
+<li style="margin-bottom: 0.5rem;"><a href="/portfolio/" style="font-weight: 600; text-decoration: none;">Check out my portfolio.</a></li>
 <li style="margin-bottom: 0.5rem;"><a href="/about/" style="font-weight: 600; text-decoration: none;">Read more about my experience.</a></li>
 <li style="margin-bottom: 0.5rem;"><a href="/contact/" style="font-weight: 600; text-decoration: none;">Get in touch.</a></li>
 </ul>
