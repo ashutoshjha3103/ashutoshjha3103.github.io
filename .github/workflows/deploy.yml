@@ -8,8 +8,9 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Opt into Node.js 24 for Actions that still declare Node 20 (deprecation warning).
-# See https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+# Run JS-based actions on Node 24 (see changelog below). Also set per-job so nested
+# composite steps inherit it reliably.
+# https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
@@ -28,26 +29,54 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
+
+      # Not using actions/configure-pages@v5 here: it still declares Node 20, and this workflow
+      # does not pass its outputs into jekyll-build-pages (correct for username.github.io).
+      # If you publish from a project repo (base path /repo), add configure-pages back and pass
+      # base_path into the Jekyll build.
+
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
           destination: ./_site
+
+      # Same archive layout as actions/upload-pages-artifact, but upload via upload-artifact@v7 (Node 24)
+      # instead of the composite action’s pinned upload-artifact@… (Node 20).
+      - name: Archive Pages artifact
+        run: |
+          tar \
+            --dereference --hard-dereference \
+            --directory "_site" \
+            -cvf "$RUNNER_TEMP/artifact.tar" \
+            --exclude=.git \
+            --exclude=.github \
+            --exclude=".[^/]*" \
+            .
+
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-artifact@v7
+        with:
+          name: github-pages
+          path: ${{ runner.temp }}/artifact.tar
+          retention-days: 1
+          if-no-files-found: error
 
   # Deployment job
   deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
     steps:
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
