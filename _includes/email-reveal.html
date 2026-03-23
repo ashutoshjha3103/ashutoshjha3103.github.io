@@ -1,0 +1,37 @@
+{% assign codes = site.data.contact.email_char_codes %}
+{% if codes and codes.size > 0 %}
+<div class="email-reveal-block">
+  <button type="button" class="btn-email-reveal" id="email-reveal-btn" aria-expanded="false" aria-controls="email-display">
+    Reveal email address
+  </button>
+  <p id="email-display" class="email-display" hidden aria-live="polite"></p>
+  <a id="email-mailto" class="email-mailto" href="#" hidden rel="nofollow">Open in your mail app</a>
+  <p class="email-hint">The address is assembled in your browser so simple scrapers are less likely to harvest it. Determined bots can still decode the numbers; for stronger protection use a contact form service.</p>
+</div>
+<noscript>
+  <p class="email-noscript">JavaScript is required to show the email address here. Please use LinkedIn or GitHub below.</p>
+</noscript>
+<script>
+(function () {
+  var codes = [{% for n in codes %}{{ n }}{% unless forloop.last %},{% endunless %}{% endfor %}];
+  var btn = document.getElementById("email-reveal-btn");
+  var disp = document.getElementById("email-display");
+  var mail = document.getElementById("email-mailto");
+  if (!btn || !disp || !mail || !codes.length) return;
+
+  function decode() {
+    return String.fromCharCode.apply(null, codes);
+  }
+
+  btn.addEventListener("click", function () {
+    var addr = decode();
+    disp.textContent = addr;
+    disp.hidden = false;
+    mail.href = "mailto:" + addr;
+    mail.hidden = false;
+    btn.setAttribute("aria-expanded", "true");
+    btn.hidden = true;
+  });
+})();
+</script>
+{% endif %}

@@ -4,18 +4,21 @@ title: Home
 permalink: /
 ---
 
-<div style="display: flex; align-items: center; justify-content: space-between; gap: 3rem; flex-wrap: wrap-reverse; margin-top: 2rem;">
-<div style="flex: 1 1 350px; font-size: 1.05rem; line-height: 1.6; text-align: justify;">
-<h3 style="margin-top: 0; font-size: 1.75rem; text-align: left;">Welcome!</h3>
-<p>I am <strong>Ashutosh Jha</strong>, a Quantitative Data Scientist based in Tübingen, Germany.</p>
-<p>An engineer at heart, I specialize at the intersection of Quantitative Methods, Machine Learning, and Financial Economics. I leverage a strong foundation in mathematics, software development and data science to build rigorous, data-driven models with a focus on solving complex challenges within the finance and energy sectors.</p>
-<ul style="padding-left: 1.2rem; margin-top: 1rem; text-align: left;">
-<li style="margin-bottom: 0.5rem;"><a href="/portfolio/" style="font-weight: 600; text-decoration: none;">Check out my portfolio.</a></li>
-<li style="margin-bottom: 0.5rem;"><a href="/about/" style="font-weight: 600; text-decoration: none;">Read more about my experience.</a></li>
-<li style="margin-bottom: 0.5rem;"><a href="/contact/" style="font-weight: 600; text-decoration: none;">Get in touch.</a></li>
-</ul>
-</div>
-<div style="flex-shrink: 0; margin: 0 auto;">
-<img src="/assets/profile.jpg" alt="Ashutosh Jha" style="width: 220px; height: 220px; object-fit: cover; object-position: center top; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
-</div>
+<div class="hero-home">
+  <div class="hero-copy">
+    <span class="hero-eyebrow">Quantitative data science</span>
+    <h1 class="hero-title">Hi, I'm Ashutosh Jha</h1>
+    <p class="hero-tagline">ML, econometrics &amp; financial economics — Tübingen, Germany</p>
+    <div class="hero-lead">
+      <p>An engineer at heart, I work at the intersection of quantitative methods, machine learning, and financial economics. I use mathematics, software, and data science to build rigorous models, with a focus on finance and energy.</p>
+    </div>
+    <ul class="hero-actions">
+      <li><a href="{{ '/portfolio/' | relative_url }}">Portfolio</a></li>
+      <li><a href="{{ '/about/' | relative_url }}">Experience &amp; CV</a></li>
+      <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+    </ul>
+  </div>
+  <div class="hero-photo-wrap">
+    <img class="hero-photo" src="{{ '/assets/profile.jpg' | relative_url }}" width="220" height="220" alt="Portrait of Ashutosh Jha">
+  </div>
 </div>

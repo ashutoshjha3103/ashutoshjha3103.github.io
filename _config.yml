@@ -1,11 +1,12 @@
 title: Ashutosh Jha
 
-# The `>` after `description:` means to ignore line-breaks until next key.
-# If you want to omit the line-break after the end of text, use `>-` instead.
-description: > 
-  © Ashutosh Jha Updated: 21-02-2026 
+# Used by jekyll-seo-tag and the site footer (keep concise).
+description: >-
+  Quantitative Data Scientist in Tübingen, Germany. Machine learning,
+  econometrics, and financial economics — rigorous models for finance and energy.
 
-# Build settings
+author:
+  name: Ashutosh Jha
 
 theme: minima
 
@@ -13,20 +14,19 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-# Theme-specific settings
-
 header_pages:
-  - index.md   # Home page
-  - about.md   # About page
-  - portfolio.md   # Portfolio page
-  - contact.md   # Contact page
+  - index.md
+  - about.md
+  - portfolio.md
+  - contact.md
 
 defaults:
   - scope:
-      path: ""  # empty string indicates all files
+      path: ""
       type: "pages"
     values:
-      layout: "home"  # Set default layout for pages to "home"
+      layout: "page"
+      image: /assets/og-image.png
 
 minima:
   skin: classic
