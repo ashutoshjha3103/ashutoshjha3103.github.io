@@ -5,8 +5,8 @@ description: >-
   Quantitative Data Scientist in Tübingen, Germany. Machine learning,
   econometrics, and financial economics, modelling for finance and energy.
 
-author:
-  name: Ashutosh Jha
+# String form so the Minima footer shows your name (a hash would render as {"name"=>"…"}).
+author: Ashutosh Jha
 
 theme: minima
 
