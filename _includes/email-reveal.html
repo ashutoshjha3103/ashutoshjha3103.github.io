@@ -6,14 +6,22 @@
   </button>
   <p id="email-display" class="email-display" hidden aria-live="polite"></p>
   <a id="email-mailto" class="email-mailto" href="#" hidden rel="nofollow">Open in your mail app</a>
-  <p class="email-hint">The address is assembled in your browser so simple scrapers are less likely to harvest it. Determined bots can still decode the numbers; for stronger protection use a contact form service.</p>
 </div>
 <noscript>
   <p class="email-noscript">JavaScript is required to show the email address here. Please use LinkedIn or GitHub below.</p>
 </noscript>
+<script type="application/json" id="email-char-codes-data">[{% for n in codes %}{{ n }}{% unless forloop.last %},{% endunless %}{% endfor %}]</script>
 <script>
 (function () {
-  var codes = [{% for n in codes %}{{ n }}{% unless forloop.last %},{% endunless %}{% endfor %}];
+  var dataEl = document.getElementById("email-char-codes-data");
+  var codes = [];
+  if (dataEl && dataEl.textContent) {
+    try {
+      codes = JSON.parse(dataEl.textContent.trim());
+    } catch (e) {
+      return;
+    }
+  }
   var btn = document.getElementById("email-reveal-btn");
   var disp = document.getElementById("email-display");
   var mail = document.getElementById("email-mailto");

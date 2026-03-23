@@ -8,7 +8,7 @@ permalink: /
   <div class="hero-copy">
     <span class="hero-eyebrow">Quantitative data science</span>
     <h1 class="hero-title">Hi, I'm Ashutosh Jha</h1>
-    <p class="hero-tagline">ML, econometrics &amp; financial economics — Tübingen, Germany</p>
+    <p class="hero-tagline">ML, econometrics &amp; financial economics Tübingen, Germany</p>
     <div class="hero-lead">
       <p>An engineer at heart, I work at the intersection of quantitative methods, machine learning, and financial economics. I use mathematics, software, and data science to build rigorous models, with a focus on finance and energy.</p>
     </div>
