@@ -134,6 +134,33 @@ permalink: /portfolio/
 
 <div class="project-card">
   <div>
+    <div class="project-title">TuebiFit</div>
+    <div class="project-meta">Cursor Hackathon 2026 · Heilbronn</div>
+    <div class="project-tags">
+      <span class="project-tag">Hackathon</span>
+      <span class="project-tag">LLM &amp; MCP</span>
+      <span class="project-tag">React</span>
+      <span class="project-tag">MediaPipe</span>
+      <span class="project-tag">Cloud Run</span>
+    </div>
+    <div class="project-desc">
+      Mobile-first fitness companion: <strong>MediaPipe</strong> rep counting and form cues (CLI/video pipeline and in-app RepCount), an <strong>LLM agent</strong> (Featherless API) with <strong>LangChain / LangGraph</strong> calling Exercise DB and OpenNutrition <strong>MCP</strong> servers for workout and meal plans, and a <strong>React + Vite</strong> SPA. Full stack containerized and deployable to <strong>Google Cloud Run</strong>.
+      <br><br>
+      <em>Co-developed with <a href="https://github.com/Bhardwaj-Sarthak" target="_blank" rel="noopener noreferrer">Sarthak Bhardwaj</a>.</em>
+    </div>
+  </div>
+  <div class="project-links">
+    <a href="https://github.com/ashutoshjha3103/tuebifit">
+      <img src="https://img.shields.io/badge/GitHub-View_Project-blue?logo=github" alt="View TuebiFit on GitHub" loading="lazy" decoding="async">
+    </a>
+    <a href="https://github.com/ashutoshjha3103/tuebifit/blob/main/assets/TueBiFit%20-%2022%20March%202026.mp4">
+      <img src="https://img.shields.io/badge/Demo-Watch_MP4-00e676?style=flat&logo=github&labelColor=0a1929" alt="Watch TuebiFit demo video on GitHub" loading="lazy" decoding="async">
+    </a>
+  </div>
+</div>
+
+<div class="project-card">
+  <div>
     <div class="project-title">Ripple Down Rules Simulation (Tree-based Algorithm)</div>
     <div class="project-meta">BITS Pilani (APPCAIR Lab)</div>
     <div class="project-tags">
