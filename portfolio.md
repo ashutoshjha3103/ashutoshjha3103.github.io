@@ -24,8 +24,8 @@ permalink: /portfolio/
     </div>
   </div>
   <div class="project-links">
-    <a href="https://github.com/ashutoshjha3103/ot_in_linear_ica">
-      <img src="https://img.shields.io/badge/GitHub-Private_Repo-lightgrey?logo=github" alt="View on GitHub" loading="lazy" decoding="async">
+    <a href="https://gitfront.io/r/ashutosh-jha/4gwwN1sPeeAD/ot-in-linear-ica/" target="_blank" rel="noopener noreferrer">
+      <img src="https://img.shields.io/badge/GitFront-View_Project-blue?logo=git&logoColor=white" alt="View on GitFront">
     </a>
   </div>
 </div>
