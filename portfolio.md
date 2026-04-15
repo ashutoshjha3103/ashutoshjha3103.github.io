@@ -153,9 +153,6 @@ permalink: /portfolio/
     <a href="https://github.com/ashutoshjha3103/tuebifit">
       <img src="https://img.shields.io/badge/GitHub-View_Project-blue?logo=github" alt="View TuebiFit on GitHub" loading="lazy" decoding="async">
     </a>
-    <a href="https://github.com/ashutoshjha3103/tuebifit/blob/main/assets/TueBiFit%20-%2022%20March%202026.mp4">
-      <img src="https://img.shields.io/badge/Demo-Watch_MP4-00e676?style=flat&logo=github&labelColor=0a1929" alt="Watch TuebiFit demo video on GitHub" loading="lazy" decoding="async">
-    </a>
   </div>
 </div>
 
