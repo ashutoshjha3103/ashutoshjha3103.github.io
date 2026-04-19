@@ -10,7 +10,7 @@ permalink: /about/
 
 <div class="cv-intro">
   <p>
-    Ashutosh is currently pursuing a Master of Science in Quantitative Data Science Methods at the Eberhard Karls University of Tübingen. He is an engineer at heart, now focused on researching Quantitative Methods with applications in Machine Learning Foundations and Financial Economics.
+    Ashutosh is currently pursuing a Master of Science in Quantitative Data Science Methods at the Eberhard Karls University of Tübingen. He is an engineer at heart, now focused on researching Quantitative Methods with applications in Machine Learning Foundations, Financial Economics, and Applied AI.
   </p>
   <p>
     Previously, Ashutosh spent three years as a Software Engineer at HSBC (Global Cloud Economics), where he focused on data engineering and forecasting models. He has also conducted research at the Max Planck Institute for Intelligent Systems and interned at the financial stability department of the Deutsche Bundesbank. He also participated in an Erasmus Exchange semester at Katholieke Universiteit Leuven in Belgium.
@@ -22,23 +22,24 @@ permalink: /about/
 <div>
   <span class="skill-category">Languages &amp; Tools</span>
   <span class="skill-tag">Python</span>
-  <span class="skill-tag">R</span>
+  <span class="skill-tag">PyTorch</span>
   <span class="skill-tag">SQL</span>
+  <span class="skill-tag">R</span>
   <span class="skill-tag">MATLAB</span>
   <span class="skill-tag">Git</span>
-  <span class="skill-tag">Linux</span>
   <span class="skill-tag">Docker</span>
-  <span class="skill-tag">GCP</span>
-  <span class="skill-tag">AWS</span>
+  <span class="skill-tag">FastAPI</span>
+  <span class="skill-tag">LangChain</span>
+  <span class="skill-tag">GCP / AWS</span>
 
   <span class="skill-category">Domain Expertise</span>
-  <span class="skill-tag">Financial Economics</span>
   <span class="skill-tag">Probabilistic ML</span>
+  <span class="skill-tag">Causal ML</span>
+  <span class="skill-tag">Financial Economics</span>
+  <span class="skill-tag">Applied NLP</span>
+  <span class="skill-tag">LLMs &amp; Agentic Systems</span>
   <span class="skill-tag">Time Series Analysis</span>
   <span class="skill-tag">Econometrics</span>
-  <span class="skill-tag">Bayesian Modelling</span>
-  <span class="skill-tag">Causal ML</span>
-  <span class="skill-tag">Deep Learning</span>
 </div>
 
 <div class="section-title">My Professional &amp; Academic Journey</div>
@@ -55,6 +56,18 @@ permalink: /about/
         Researching the application of <strong>Optimal Transport theory</strong> to linear Independent Component Analysis (ICA).
         <br>
         <em>Supervisors: Dr. Simon Buchholz, Prof. Dr. Michel Besserve, Prof. Dr. Joachim Grammig</em>
+      </div>
+    </div>
+  </div>
+
+<div class="timeline-item">
+    <div class="timeline-content">
+      <span class="badge badge-award">Project</span>
+      <div class="role-title">Heilbronn Hackathon 2026: TuebiFit</div>
+      <div class="org-name">Cursor Hackathon</div>
+      <span class="time-period">March 2026</span>
+      <div class="description">
+        Architected a full-stack, LLM-powered agentic application utilizing LangChain, FastAPI, and retrieval-augmented generation (RAG) pipelines. <a href="https://github.com/ashutoshjha3103/tuebifit" target="_blank" rel="noopener noreferrer">View GitHub</a>.
       </div>
     </div>
   </div>

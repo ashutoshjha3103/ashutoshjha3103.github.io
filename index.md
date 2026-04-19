@@ -8,9 +8,9 @@ permalink: /
   <div class="hero-copy">
     <span class="hero-eyebrow">Quantitative data science</span>
     <h1 class="hero-title">Hi, I'm Ashutosh Jha</h1>
-    <p class="hero-tagline">Quantitative Data Science Methods, Machine Learning &amp; Financial Economics.</p>
+    <p class="hero-tagline">Quantitative Data Science Methods, Machine Learning Foundations &amp; Financial Economics.</p>
     <div class="hero-lead">
-      <p>An engineer at heart, I work at the intersection of quantitative methods, machine learning, and financial economics. I use mathematics, software, and data science to build rigorous models, with a focus on finance and energy.</p>
+      <p>An engineer at heart, I work at the intersection of quantitative methods, machine learning, and financial economics. I use mathematics, software, and data science to build rigorous models, with a focus on applications in societal systems, financial economics and energy.</p>
     </div>
     <ul class="hero-actions">
       <li><a href="{{ '/portfolio/' | relative_url }}">Portfolio</a></li>
