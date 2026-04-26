@@ -144,9 +144,8 @@ permalink: /portfolio/
       <span class="project-tag">Cloud Run</span>
     </div>
     <div class="project-desc">
-      Mobile-first fitness companion: <strong>MediaPipe</strong> rep counting and form cues (CLI/video pipeline and in-app RepCount), an <strong>LLM agent</strong> (Featherless API) with <strong>LangChain / LangGraph</strong> calling Exercise DB and OpenNutrition <strong>MCP</strong> servers for workout and meal plans, and a <strong>React + Vite</strong> SPA. Full stack containerized and deployable to <strong>Google Cloud Run</strong>.
+      Co-developed VisionLLM based Mobile fitness companion: <strong>MediaPipe</strong> rep counting and form cues (CLI/video pipeline and in-app RepCount), an <strong>LLM agent</strong> (Featherless API) with <strong>LangChain / LangGraph</strong> calling Exercise DB and OpenNutrition <strong>MCP</strong> servers for workout and meal plans, and a <strong>React + Vite</strong> SPA. Full stack containerized and deployable to <strong>Google Cloud Run</strong>.
       <br><br>
-      <em>Co-developed with <a href="https://github.com/Bhardwaj-Sarthak" target="_blank" rel="noopener noreferrer">Sarthak Bhardwaj</a>.</em>
     </div>
   </div>
   <div class="project-links">
