@@ -7,7 +7,7 @@
 </head>
 <body class="lang-en theme-presentation">
 
-  <!-- Thread strip at top of slides (background, z-index 1) -->
+  <!-- Thread strip at top (background, z-index 1) -->
   <div class="background-thread-container">
     <svg class="background-thread-svg" viewBox="0 0 1200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
       <path id="thread-ghost"
@@ -34,11 +34,18 @@
         <span class="text-en">Use ← → Arrow Keys</span>
         <span class="text-de">Pfeiltasten ← → nutzen</span>
       </div>
-      <!-- Labels show the ACTIVE language -->
-      <button class="lang-toggle" id="lang-toggle-btn" aria-label="Toggle Language">
-        <span class="lang-label en-active">EN</span>
-        <span class="lang-label de-active">DE</span>
-      </button>
+      <div class="header-right">
+        <button class="fullscreen-btn" id="fullscreen-btn" aria-label="Enter Fullscreen" title="Fullscreen (F)">
+          <svg class="fs-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+            <path class="fs-enter" d="M3 8V3h5M12 3h5v5M17 12v5h-5M8 17H3v-5"/>
+            <path class="fs-exit"  d="M8 3v5H3M17 8h-5V3M12 17v-5h5M3 12h5v5" style="display:none"/>
+          </svg>
+        </button>
+        <button class="lang-toggle" id="lang-toggle-btn" aria-label="Toggle Language">
+          <span class="lang-label en-active">EN</span>
+          <span class="lang-label de-active">DE</span>
+        </button>
+      </div>
     </header>
 
     <!-- Main Content Area -->
@@ -54,9 +61,6 @@
           </div>
 
           <div class="mascot-minion" id="minion-character">
-
-            <!-- Slide 3: Mortarboard graduation cap (replaces the unclear cape) -->
-            <div class="acc-mortarboard accessory"></div>
 
             <div class="minion-hair">
               <div class="strand strand-1"></div>
@@ -94,39 +98,35 @@
               </div>
             </div>
 
-            <!-- Slide 2: Cricket -->
-            <div class="acc-cricket-bat accessory"><div class="bat-handle"></div><div class="bat-blade"></div></div>
-            <div class="acc-cricket-ball accessory"><div class="ball-seam"></div></div>
-            <div class="acc-wickets accessory">
-              <div class="stump stump1"></div><div class="stump stump2"></div><div class="stump stump3"></div>
-              <div class="bail bail1"></div><div class="bail bail2"></div>
+            <!-- Slide 2: Baseball cap (no bat/ball/wickets) -->
+            <div class="acc-baseball-cap accessory"></div>
+
+            <!-- Slide 3: Physics & Algorithm symbols -->
+            <div class="acc-physics-symbols accessory">
+              <span class="phys-sym ps1">F=ma</span>
+              <span class="phys-sym ps2">∇²φ</span>
+              <span class="phys-sym ps3">λ</span>
+              <span class="phys-sym ps4">E=hf</span>
+              <span class="phys-sym ps5">O(n)</span>
+              <span class="phys-sym ps6">∂/∂t</span>
+              <span class="phys-sym ps7">{0,1}</span>
+              <span class="phys-sym ps8">∑aₙ</span>
             </div>
 
-            <!-- Slide 3: Graduation scroll (diploma in hand) -->
-            <div class="acc-scroll-slide3 accessory"></div>
+            <!-- Slide 4: Black suit + red tie (no laptop) -->
+            <div class="acc-suit accessory"></div>
+            <div class="acc-tie accessory"></div>
 
-            <!-- Slide 4: Laptop -->
-            <div class="acc-laptop accessory">
-              <div class="laptop-screen">&gt; _</div>
-              <div class="laptop-base"></div>
-            </div>
-
-            <!-- Slide 5: Scarf/Muffler + Pretzel (SVG for clear pretzel shape) -->
+            <!-- Slide 5: Scarf/Muffler + SVG Pretzel -->
             <div class="acc-scarf accessory"></div>
             <div class="acc-pretzel accessory">
               <svg viewBox="0 0 72 65" width="72" height="65" xmlns="http://www.w3.org/2000/svg">
-                <!-- Two loops + crossing arms -->
                 <g fill="none" stroke="#b45309" stroke-linecap="round" stroke-linejoin="round">
-                  <!-- Left loop -->
                   <path d="M 36 34 C 36 20 16 12 13 24 C 10 36 24 42 36 34" stroke-width="9"/>
-                  <!-- Right loop -->
                   <path d="M 36 34 C 36 20 56 12 59 24 C 62 36 48 42 36 34" stroke-width="9"/>
-                  <!-- Bottom left arm -->
                   <path d="M 20 40 C 16 56 24 63 36 63" stroke-width="9"/>
-                  <!-- Bottom right arm -->
                   <path d="M 52 40 C 56 56 48 63 36 63" stroke-width="9"/>
                 </g>
-                <!-- Salt dots -->
                 <circle cx="14" cy="22" r="3.5" fill="white" opacity="0.9"/>
                 <circle cx="58" cy="22" r="3.5" fill="white" opacity="0.9"/>
                 <circle cx="27" cy="57" r="3"   fill="white" opacity="0.9"/>
@@ -134,25 +134,23 @@
               </svg>
             </div>
 
-            <!-- Slide 6: Flemish greeting + Euro coin in hand -->
+            <!-- Slide 6: Flemish greeting + Euro coin in LEFT hand -->
             <div class="acc-goedendag accessory">Goedendag!</div>
             <div class="acc-euro accessory">€</div>
 
-            <!-- Slide 7: Data-science / causal-discovery symbols (both sides of minion) -->
+            <!-- Slide 7: Data-science / causal-discovery symbols — spread wide -->
             <div class="acc-math-symbols accessory">
-              <!-- Left side: optimization & statistics -->
               <span class="math-sym sym1">∇</span>
               <span class="math-sym sym2">∫</span>
               <span class="math-sym sym7">E[X]</span>
               <span class="math-sym sym8">σ²</span>
-              <!-- Right side: causal inference & ICA -->
               <span class="math-sym sym3">do(X)</span>
               <span class="math-sym sym4">ρ</span>
               <span class="math-sym sym5">W·X=S</span>
               <span class="math-sym sym6">P(B|A)</span>
             </div>
 
-            <!-- Slide 8: Orbiting Stakeholders -->
+            <!-- Slide 8: Static floating stakeholder perspectives -->
             <div class="acc-orbit accessory">
               <div class="orbit-icon risk"><i class="emoji">🛡️</i><span>Risk</span></div>
               <div class="orbit-icon compliance"><i class="emoji">⚖️</i><span>Compliance</span></div>
@@ -175,7 +173,7 @@
       <!-- SLIDE CARDS -->
       <section class="slides-container">
 
-        <!-- Slide 1: Roots -->
+        <!-- Slide 1: Roots / Opening Thesis -->
         <article class="slide-card active" data-index="0">
           <span class="slide-tag">01 / 08 · <span class="text-en">Roots</span><span class="text-de">Herkunft</span></span>
           <h2 class="slide-title">
@@ -210,14 +208,14 @@
             <p class="slide-connector text-de">Die von zu Hause mitgebrachte Disziplin übertrug sich auf Sport und Schule.</p>
             <ul class="text-en presentation-bullets">
               <li>As a teenager, cricket consumed my afternoons — I played for the under 16 team representing my school in state tournaments</li>
-              <li>Cricket is a long game. It taught me to anchor when the situation calls for it, to accelerate when the moment arrives, and to trust teammates implicitly — never burning bright in a short spectacle when measured consistency wins</li>
+              <li>Cricket taught me to anchor when the situation calls for it, to accelerate when the moment arrives, and to trust teammates implicitly — never burning bright in a short spectacle when measured consistency wins</li>
               <li>These principles define how I approach collaborative work today: knowing when to lead, when to support, and when to seize the opportunity</li>
               <li>Matriculated with a perfect 10/10 CGPA; scored 94.2% in the Abitur equivalent, ranking roughly in the top 2% nationally</li>
               <li>Took a gap year to explore options, guided by a strong interest in physics — especially electromagnetism</li>
             </ul>
             <ul class="text-de presentation-bullets">
               <li>Als Teenager widmete ich meine Nachmittage dem Cricket — ich spielte für die U16-Schulmannschaft bei Staatsturnieren</li>
-              <li>Cricket ist ein langwieriges Spiel: Es lehrte mich, wann man stabilisiert, wann man beschleunigt und wann man dem Team vertraut — konstante Stärke schlägt ein kurzes Aufflackern</li>
+              <li>Cricket lehrte mich, wann man stabilisiert, wann man beschleunigt und wann man dem Team vertraut — konstante Stärke schlägt ein kurzes Aufflackern</li>
               <li>Diese Prinzipien prägen meine Zusammenarbeit bis heute: wissen, wann man führt, wann man unterstützt und wann man die Chance ergreift</li>
               <li>Realschulabschluss mit perfekten 10/10 CGPA; 94,2 % im Abitur — landesweit zu den besten 2 %</li>
               <li>Ein Gap Year zur vertieften Erkundung meiner Optionen, geleitet von starkem Interesse an Physik und Elektromagnetismus</li>
@@ -236,18 +234,16 @@
             <p class="slide-connector text-en">University studies shifted my focus from pure sciences to applied programming.</p>
             <p class="slide-connector text-de">Das Universitätsstudium verlagerte meinen Fokus von reinen Naturwissenschaften zur angewandten Programmierung.</p>
             <ul class="text-en presentation-bullets">
-              <li>Scored 348/450 in BITSAT, an entrance exam for one of the top 10 most prestigious universities in India</li>
-              <li>Joined BITS Pilani in Electrical &amp; Electronics Engineering</li>
+              <li>Scored 348/450 in BITSAT — top 200 out of 200,000 candidates — and joined BITS Pilani in Electrical &amp; Electronics Engineering</li>
               <li>Academic focus shifted after taking courses in Programming, Machine Learning, and Neural Networks</li>
               <li>Kept up sports participation by representing the university Cricket Club in regional tournaments</li>
               <li>Graduated with an 8.12/10 CGPA, fully transitioned into software and data-driven disciplines</li>
             </ul>
             <ul class="text-de presentation-bullets">
-              <li>Erreichte 348/450 Punkte im BITSAT, der Aufnahmeprüfung für eine der Top-10-Universitäten in Indien</li>
-              <li>Studium an der BITS Pilani im Bereich Elektro- und Informationstechnik</li>
+              <li>348/450 Punkte im BITSAT — unter den besten 200 von 200.000 Teilnehmern — und Studium an der BITS Pilani in der Elektro- und Informationstechnik</li>
               <li>Der akademische Fokus verschob sich durch Kurse in Programmierung, Machine Learning und neuronalen Netzen</li>
-              <li>Aufrechterhaltung meiner sportlichen Aktivität, indem ich den Cricket-Club der Universität bei regionalen Turnieren vertrat</li>
-              <li>Abschluss mit einem 8,12/10 CGPA und vollständiger Wechsel in datengetriebene und softwarebasierte Disziplinen</li>
+              <li>Aufrechterhaltung meiner sportlichen Aktivität beim Cricket-Club der Universität</li>
+              <li>Abschluss mit 8,12/10 CGPA und vollständiger Wechsel in datengetriebene Disziplinen</li>
             </ul>
           </div>
         </article>
@@ -271,9 +267,9 @@
             </ul>
             <ul class="text-de presentation-bullets">
               <li>Einstieg bei HSBC als Software Engineer im Cloud-Economics-Team während der Pandemie 2020</li>
-              <li>Entwicklung von cloud-nativen ETL-Datenpipelines zur Verarbeitung großer operativer Datenmengen</li>
+              <li>Entwicklung von cloud-nativen ETL-Pipelines zur Verarbeitung großer operativer Datenmengen</li>
               <li>Erweiterung der Rolle auf statistische Modellierung, Prognosen und Anomalieerkennung</li>
-              <li>Entwicklung von Modellen für Verhandlungen mit Cloud-Anbietern, die zu erheblichen Kosteneinsparungen führten</li>
+              <li>Entwicklung von Modellen für Verhandlungen mit Cloud-Anbietern — erhebliche Kosteneinsparungen</li>
               <li>Mentoring von zwei Absolventen und Übernahme der operativen Leitung</li>
             </ul>
           </div>
@@ -291,18 +287,18 @@
             <p class="slide-connector text-de">Akademische Ambitionen motivierten mich zu internationaler Erfahrung und vertieftem Wissen.</p>
             <ul class="text-en presentation-bullets">
               <li>A high school exchange to Japan (JENESYS) provided an early, formative international experience</li>
-              <li>Wanted to study and live abroad to gain broader international exposure and academic depth</li>
-              <li>Self-funded the move to Germany after three years at HSBC</li>
+              <li>Germany offered rigorous interdisciplinary quantitative programs and a two-year research focus — the depth I needed</li>
+              <li>Self-funded the move after three years at HSBC; my sister's own Master's here helped me understand the system</li>
               <li>October 2023: Began M.Sc. Quantitative Data Science Methods at the University of Tübingen</li>
-              <li>Committed to learning German, currently at B1 and working toward B2</li>
+              <li>Committed to learning German — currently B1, working toward B2</li>
               <li>Specializing in methods for machine learning and financial econometrics</li>
             </ul>
             <ul class="text-de presentation-bullets">
               <li>Ein Schüleraustausch nach Japan (JENESYS) bot eine frühe, prägende internationale Erfahrung</li>
-              <li>Mein Ziel war es, im Ausland zu studieren und zu leben, um tiefgreifende internationale Einblicke und akademische Tiefe zu gewinnen</li>
-              <li>Nach drei Jahren bei HSBC finanzierte ich den Umzug nach Deutschland selbst</li>
+              <li>Deutschland bietet rigorose interdisziplinäre Programme mit zweijährigem Forschungsfokus — genau die Tiefe, die ich brauchte</li>
+              <li>Nach drei Jahren bei HSBC selbst finanziert; das Masterstudium meiner Schwester hier half mir, das System zu verstehen</li>
               <li>Oktober 2023: Start des M.Sc. Quantitative Data Science Methods an der Universität Tübingen</li>
-              <li>Konsequentes Deutschlernen, aktuell B1 mit dem Ziel B2</li>
+              <li>Konsequentes Deutschlernen — aktuell B1, mit dem Ziel B2</li>
               <li>Spezialisierung auf Methoden für Machine Learning und Finanzökonometrie</li>
             </ul>
           </div>
@@ -353,7 +349,7 @@
               <li>Masterarbeit am Max-Planck-Institut für Intelligente Systeme in Zusammenarbeit mit der Universität Tübingen</li>
               <li>Thema: Optimaler Transport in linearer Unabhängiger Komponentenanalyse (ICA)</li>
               <li>Über reine Vorhersagen hinaus: Extraktion wahrer kausaler Signale aus verrauschten Datengemischen</li>
-              <li>Entwicklung von Methoden, die interpretierbar, mathematisch fundiert und auf reale Datensätze anwendbar sind</li>
+              <li>Entwicklung interpretierbarer, mathematisch fundierter Methoden für reale Datensätze</li>
             </ul>
           </div>
         </article>
@@ -372,13 +368,13 @@
               <li>At HSBC, I moved fast technically on cloud cost forecasting. Then I slowed down: audit flagged that savings could not cross fiscal years, risk raised concerns about automated compute shutdown, executives needed cross-vendor benchmarks for negotiating leverage. One model, four different conversations</li>
               <li>That taught me self-awareness as a data scientist: technical speed is a strength, but stakeholder fluency is what makes models land</li>
               <li>Financial services is uniquely challenging because the same analysis must speak to Risk, Portfolio, Compliance, Audit, and the executive suite simultaneously</li>
-              <li>I aim to be a data scientist who builds with rigour and communicates across every function, a direct bridge between science and business</li>
+              <li>I aim to be a data scientist who builds with rigour and communicates across every function — a direct bridge between science and business</li>
             </ul>
             <ul class="text-de presentation-bullets">
-              <li>Bei HSBC ging ich technisch zunächst schnell vor. Dann verlangsamte ich: Audit monierte jahresübergreifende Einsparungen, Risiko äußerte Bedenken zu automatisierten Abschaltungen, Management brauchte Anbietervergleiche als Verhandlungsgrundlage. Ein Modell, vier verschiedene Gespräche</li>
-              <li>Das lehrte mich Selbstreflexion: Technische Geschwindigkeit ist eine Stärke, aber Stakeholder-Kompetenz entscheidet darüber, ob Modelle Wirkung entfalten</li>
+              <li>Bei HSBC ging ich technisch zunächst schnell vor. Dann verlangsamte ich: Audit monierte jahresübergreifende Einsparungen, Risiko äußerte Bedenken zu automatisierten Abschaltungen, Management brauchte Anbietervergleiche. Ein Modell, vier verschiedene Gespräche</li>
+              <li>Das lehrte mich Selbstreflexion: Technische Geschwindigkeit ist eine Stärke — aber Stakeholder-Kompetenz entscheidet darüber, ob Modelle Wirkung entfalten</li>
               <li>Finanzdienstleistungen sind einzigartig anspruchsvoll, weil dieselbe Analyse gleichzeitig Risiko, Portfolio, Compliance, Audit und Management ansprechen muss</li>
-              <li>Mein Ziel: mit Strenge entwickeln und funktionsübergreifend kommunizieren, als direkte Brücke zwischen Wissenschaft und Geschäft</li>
+              <li>Mein Ziel: mit Strenge entwickeln und funktionsübergreifend kommunizieren — als direkte Brücke zwischen Wissenschaft und Geschäft</li>
             </ul>
           </div>
         </article>
@@ -413,26 +409,26 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const deck = document.getElementById("presentation-deck");
-      const slides = document.querySelectorAll(".slide-card");
-      const dots = document.querySelectorAll(".dot");
-      const prevBtn = document.getElementById("prev-btn");
-      const nextBtn = document.getElementById("next-btn");
-      const langToggleBtn = document.getElementById("lang-toggle-btn");
-      const minion = document.getElementById("minion-character");
-      const threadPath = document.getElementById("thread-main-path");
-      const threadBall = document.getElementById("thread-ball");
+      const deck        = document.getElementById("presentation-deck");
+      const slides      = document.querySelectorAll(".slide-card");
+      const dots        = document.querySelectorAll(".dot");
+      const prevBtn     = document.getElementById("prev-btn");
+      const nextBtn     = document.getElementById("next-btn");
+      const langBtn     = document.getElementById("lang-toggle-btn");
+      const fsBtn       = document.getElementById("fullscreen-btn");
+      const minion      = document.getElementById("minion-character");
+      const threadPath  = document.getElementById("thread-main-path");
+      const threadBall  = document.getElementById("thread-ball");
 
       let currentIdx = 0;
       const totalSlides = slides.length;
 
+      /* Thread setup */
       let pathLength = 0;
       if (threadPath) {
         pathLength = threadPath.getTotalLength();
-        threadPath.style.setProperty('--thread-length', pathLength);
         threadPath.style.strokeDasharray = pathLength;
         threadPath.style.strokeDashoffset = pathLength;
-        // Ball starts at the beginning
         if (threadBall) {
           const pt = threadPath.getPointAtLength(0);
           threadBall.setAttribute('cx', pt.x);
@@ -442,11 +438,11 @@
 
       function updateThread(index) {
         if (!threadPath || pathLength === 0) return;
-        const progress = index / (totalSlides - 1);
-        const revealLength = pathLength * progress;
-        threadPath.style.strokeDashoffset = pathLength - revealLength;
+        const pct = index / (totalSlides - 1);
+        const len = pathLength * pct;
+        threadPath.style.strokeDashoffset = pathLength - len;
         if (threadBall) {
-          const pt = threadPath.getPointAtLength(revealLength);
+          const pt = threadPath.getPointAtLength(len);
           threadBall.setAttribute('cx', pt.x);
           threadBall.setAttribute('cy', pt.y);
         }
@@ -455,62 +451,60 @@
       function showSlide(index) {
         if (index < 0) index = 0;
         if (index >= totalSlides) index = totalSlides - 1;
-
         currentIdx = index;
         deck.className = `slide-state-${currentIdx}`;
-
-        slides.forEach((slide, idx) => {
-          slide.classList.toggle("active", idx === currentIdx);
-          slide.setAttribute("aria-hidden", idx !== currentIdx ? "true" : "false");
+        slides.forEach((s, i) => {
+          s.classList.toggle("active", i === currentIdx);
+          s.setAttribute("aria-hidden", i !== currentIdx ? "true" : "false");
         });
-
-        dots.forEach((dot, idx) => {
-          dot.classList.toggle("active", idx === currentIdx);
-        });
-
-        if (minion) {
-          minion.classList.remove("bump");
-          void minion.offsetWidth;
-          minion.classList.add("bump");
-        }
-
+        dots.forEach((d, i) => d.classList.toggle("active", i === currentIdx));
+        if (minion) { minion.classList.remove("bump"); void minion.offsetWidth; minion.classList.add("bump"); }
         updateThread(currentIdx);
-
         prevBtn.disabled = (currentIdx === 0);
         nextBtn.disabled = (currentIdx === totalSlides - 1);
       }
 
-      function nextSlide() { if (currentIdx < totalSlides - 1) showSlide(currentIdx + 1); }
-      function prevSlide() { if (currentIdx > 0) showSlide(currentIdx - 1); }
+      const nextSlide = () => { if (currentIdx < totalSlides - 1) showSlide(currentIdx + 1); };
+      const prevSlide = () => { if (currentIdx > 0) showSlide(currentIdx - 1); };
 
       nextBtn.addEventListener("click", nextSlide);
       prevBtn.addEventListener("click", prevSlide);
+      dots.forEach(d => d.addEventListener("click", e => showSlide(parseInt(e.target.dataset.slide, 10))));
 
-      dots.forEach((dot) => {
-        dot.addEventListener("click", (e) => {
-          showSlide(parseInt(e.target.getAttribute("data-slide"), 10));
-        });
-      });
-
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "ArrowRight") nextSlide();
+      document.addEventListener("keydown", e => {
+        if (e.key === "ArrowRight" || e.key === " ") { e.preventDefault(); nextSlide(); }
         else if (e.key === "ArrowLeft") prevSlide();
-        else if (e.key === " ") { e.preventDefault(); nextSlide(); }
+        else if (e.key === "f" || e.key === "F") toggleFullscreen();
+        else if (e.key === "Escape" && document.fullscreenElement) document.exitFullscreen();
       });
 
       let touchStartX = 0;
-      document.addEventListener("touchstart", (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-      }, { passive: true });
-      document.addEventListener("touchend", (e) => {
+      document.addEventListener("touchstart", e => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+      document.addEventListener("touchend",   e => {
         const diff = e.changedTouches[0].screenX - touchStartX;
-        if (diff < -50) nextSlide();
-        if (diff > 50) prevSlide();
+        if (diff < -50) nextSlide(); else if (diff > 50) prevSlide();
       }, { passive: true });
 
-      langToggleBtn.addEventListener("click", () => {
+      langBtn.addEventListener("click", () => {
         document.body.classList.toggle("lang-en");
         document.body.classList.toggle("lang-de");
+      });
+
+      /* Fullscreen */
+      function toggleFullscreen() {
+        if (!document.fullscreenElement) {
+          document.documentElement.requestFullscreen().catch(() => {});
+        } else {
+          document.exitFullscreen();
+        }
+      }
+      fsBtn.addEventListener("click", toggleFullscreen);
+      document.addEventListener("fullscreenchange", () => {
+        const isFs = !!document.fullscreenElement;
+        fsBtn.querySelector(".fs-enter").style.display = isFs ? "none"  : "";
+        fsBtn.querySelector(".fs-exit").style.display  = isFs ? ""     : "none";
+        fsBtn.setAttribute("aria-label", isFs ? "Exit Fullscreen" : "Enter Fullscreen");
+        document.body.classList.toggle("is-fullscreen", isFs);
       });
 
       showSlide(0);
