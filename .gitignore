@@ -1,0 +1,15 @@
+# Jekyll build output — built by GitHub Actions in the cloud, not committed
+_site/
+
+# Ruby gem vendor cache — installed fresh by bundler on each machine
+vendor/
+
+# Bundler local config
+.bundle/
+
+# macOS
+.DS_Store
+
+# Editor
+.sass-cache/
+*.swp

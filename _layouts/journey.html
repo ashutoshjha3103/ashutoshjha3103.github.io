@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {%- include head.html -%}
+  <link rel="stylesheet" href="{{ '/assets/css/journey.css' | relative_url }}">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+</head>
+<body class="lang-en theme-presentation">
+
+  <!-- Thread strip at top of slides (background, z-index 1) -->
+  <div class="background-thread-container">
+    <svg class="background-thread-svg" viewBox="0 0 1200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path id="thread-ghost"
+            d="M 0,40 C 100,10 200,70 300,40 C 400,10 500,70 600,40 C 700,10 800,70 900,40 C 1000,10 1100,70 1200,40"
+            class="thread-path-bg" />
+      <path id="thread-main-path"
+            d="M 0,40 C 100,10 200,70 300,40 C 400,10 500,70 600,40 C 700,10 800,70 900,40 C 1000,10 1100,70 1200,40"
+            class="thread-path" />
+      <circle id="thread-ball" r="8" fill="#10b981" class="thread-ball-dot" cx="0" cy="40"/>
+    </svg>
+  </div>
+
+  <!-- Presentation Deck -->
+  <div id="presentation-deck" class="slide-state-0">
+
+    <!-- Header -->
+    <header class="presentation-header">
+      <a href="{{ '/' | relative_url }}" class="exit-btn" id="exit-btn">
+        <span class="icon">←</span>
+        <span class="text-en">Back to Site</span>
+        <span class="text-de">Zurück zur Website</span>
+      </a>
+      <div class="guidance-hint">
+        <span class="text-en">Use ← → Arrow Keys</span>
+        <span class="text-de">Pfeiltasten ← → nutzen</span>
+      </div>
+      <!-- Labels show the ACTIVE language -->
+      <button class="lang-toggle" id="lang-toggle-btn" aria-label="Toggle Language">
+        <span class="lang-label en-active">EN</span>
+        <span class="lang-label de-active">DE</span>
+      </button>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="presentation-main">
+
+      <!-- MASCOT -->
+      <section class="mascot-viewport">
+        <div class="mascot-wrapper">
+
+          <div class="photo-frame">
+            <img src="{{ '/assets/profile.jpg' | relative_url }}" alt="Ashutosh Jha" />
+            <span class="photo-name">Ashutosh Jha</span>
+          </div>
+
+          <div class="mascot-minion" id="minion-character">
+
+            <!-- Slide 3: Mortarboard graduation cap (replaces the unclear cape) -->
+            <div class="acc-mortarboard accessory"></div>
+
+            <div class="minion-hair">
+              <div class="strand strand-1"></div>
+              <div class="strand strand-2"></div>
+              <div class="strand strand-3"></div>
+              <div class="strand strand-4"></div>
+            </div>
+
+            <div class="minion-eyes">
+              <div class="goggle-band"></div>
+              <div class="eye left-eye">
+                <div class="pupil"></div>
+                <div class="eyelid"></div>
+              </div>
+              <div class="eye right-eye">
+                <div class="pupil"></div>
+                <div class="eyelid"></div>
+              </div>
+            </div>
+
+            <div class="minion-mouth">
+              <div class="mouth-toothy"><div class="teeth"></div><div class="tongue"></div></div>
+              <div class="mouth-peaceful"></div>
+              <div class="mouth-laugh"><div class="teeth"></div><div class="tongue"></div></div>
+              <div class="mouth-smirk"></div>
+              <div class="mouth-curious"></div>
+              <div class="mouth-grin"><div class="teeth"></div></div>
+            </div>
+
+            <div class="minion-clothes">
+              <div class="overalls">
+                <div class="strap left"></div>
+                <div class="strap right"></div>
+                <div class="pocket"><span class="pocket-logo">G</span></div>
+              </div>
+            </div>
+
+            <!-- Slide 2: Cricket -->
+            <div class="acc-cricket-bat accessory"><div class="bat-handle"></div><div class="bat-blade"></div></div>
+            <div class="acc-cricket-ball accessory"><div class="ball-seam"></div></div>
+            <div class="acc-wickets accessory">
+              <div class="stump stump1"></div><div class="stump stump2"></div><div class="stump stump3"></div>
+              <div class="bail bail1"></div><div class="bail bail2"></div>
+            </div>
+
+            <!-- Slide 3: Graduation scroll (diploma in hand) -->
+            <div class="acc-scroll-slide3 accessory"></div>
+
+            <!-- Slide 4: Laptop -->
+            <div class="acc-laptop accessory">
+              <div class="laptop-screen">&gt; _</div>
+              <div class="laptop-base"></div>
+            </div>
+
+            <!-- Slide 5: Scarf/Muffler + Pretzel (SVG for clear pretzel shape) -->
+            <div class="acc-scarf accessory"></div>
+            <div class="acc-pretzel accessory">
+              <svg viewBox="0 0 72 65" width="72" height="65" xmlns="http://www.w3.org/2000/svg">
+                <!-- Two loops + crossing arms -->
+                <g fill="none" stroke="#b45309" stroke-linecap="round" stroke-linejoin="round">
+                  <!-- Left loop -->
+                  <path d="M 36 34 C 36 20 16 12 13 24 C 10 36 24 42 36 34" stroke-width="9"/>
+                  <!-- Right loop -->
+                  <path d="M 36 34 C 36 20 56 12 59 24 C 62 36 48 42 36 34" stroke-width="9"/>
+                  <!-- Bottom left arm -->
+                  <path d="M 20 40 C 16 56 24 63 36 63" stroke-width="9"/>
+                  <!-- Bottom right arm -->
+                  <path d="M 52 40 C 56 56 48 63 36 63" stroke-width="9"/>
+                </g>
+                <!-- Salt dots -->
+                <circle cx="14" cy="22" r="3.5" fill="white" opacity="0.9"/>
+                <circle cx="58" cy="22" r="3.5" fill="white" opacity="0.9"/>
+                <circle cx="27" cy="57" r="3"   fill="white" opacity="0.9"/>
+                <circle cx="45" cy="57" r="3"   fill="white" opacity="0.9"/>
+              </svg>
+            </div>
+
+            <!-- Slide 6: Flemish greeting + Euro coin in hand -->
+            <div class="acc-goedendag accessory">Goedendag!</div>
+            <div class="acc-euro accessory">€</div>
+
+            <!-- Slide 7: Data-science / causal-discovery symbols (both sides of minion) -->
+            <div class="acc-math-symbols accessory">
+              <!-- Left side: optimization & statistics -->
+              <span class="math-sym sym1">∇</span>
+              <span class="math-sym sym2">∫</span>
+              <span class="math-sym sym7">E[X]</span>
+              <span class="math-sym sym8">σ²</span>
+              <!-- Right side: causal inference & ICA -->
+              <span class="math-sym sym3">do(X)</span>
+              <span class="math-sym sym4">ρ</span>
+              <span class="math-sym sym5">W·X=S</span>
+              <span class="math-sym sym6">P(B|A)</span>
+            </div>
+
+            <!-- Slide 8: Orbiting Stakeholders -->
+            <div class="acc-orbit accessory">
+              <div class="orbit-icon risk"><i class="emoji">🛡️</i><span>Risk</span></div>
+              <div class="orbit-icon compliance"><i class="emoji">⚖️</i><span>Compliance</span></div>
+              <div class="orbit-icon audit"><i class="emoji">🔍</i><span>Audit</span></div>
+              <div class="orbit-icon genai"><i class="emoji">🤖</i><span>GenAI</span></div>
+              <div class="orbit-icon investment"><i class="emoji">📈</i><span>Investment</span></div>
+              <div class="orbit-icon customers"><i class="emoji">👥</i><span>Customers</span></div>
+            </div>
+
+            <div class="minion-limbs">
+              <div class="arm left-arm"><div class="glove"></div></div>
+              <div class="arm right-arm"><div class="glove"></div></div>
+              <div class="leg left-leg"><div class="shoe"></div></div>
+              <div class="leg right-leg"><div class="shoe"></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE CARDS -->
+      <section class="slides-container">
+
+        <!-- Slide 1: Roots -->
+        <article class="slide-card active" data-index="0">
+          <span class="slide-tag">01 / 08 · <span class="text-en">Roots</span><span class="text-de">Herkunft</span></span>
+          <h2 class="slide-title">
+            <span class="text-en">Roots</span>
+            <span class="text-de">Wurzeln</span>
+          </h2>
+          <div class="slide-body">
+            <p class="slide-connector text-en">I am a data scientist drawn to causal relationships — trained by experience to see the same problem through many different lenses simultaneously.</p>
+            <p class="slide-connector text-de">Ich bin Data Scientist mit Interesse an kausalen Zusammenhängen — durch Erfahrung geschult, dasselbe Problem gleichzeitig aus vielen verschiedenen Perspektiven zu betrachten.</p>
+            <ul class="text-en presentation-bullets">
+              <li>Born in Eastern India and grew up in New Delhi — shaped early by a family that placed education above all else</li>
+              <li>My mother tutored me before school; my father, despite a long day at work, would always sit with us in the evening to review our studies</li>
+              <li>That discipline, curiosity, and rigour — instilled long before any classroom — is the common thread through everything that follows</li>
+            </ul>
+            <ul class="text-de presentation-bullets">
+              <li>Geboren in Ostindien, aufgewachsen in Neu-Delhi — geprägt von einer Familie, die Bildung über alles stellte</li>
+              <li>Meine Mutter unterrichtete mich vor der Schule; mein Vater setzte sich trotz langer Arbeitstage jeden Abend zu uns, um unsere Fortschritte zu besprechen</li>
+              <li>Diese Disziplin, Neugier und Gründlichkeit — lange vor jedem Klassenzimmer vermittelt — ist der rote Faden durch alles, was folgt</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Slide 2: Cricket & Academics -->
+        <article class="slide-card" data-index="1">
+          <span class="slide-tag">02 / 08 · <span class="text-en">Foundation</span><span class="text-de">Fundament</span></span>
+          <h2 class="slide-title">
+            <span class="text-en">The Pitch and the Classroom</span>
+            <span class="text-de">Das Spielfeld und das Klassenzimmer</span>
+          </h2>
+          <div class="slide-body">
+            <p class="slide-connector text-en">The discipline learned at home carried over into sports and academics.</p>
+            <p class="slide-connector text-de">Die von zu Hause mitgebrachte Disziplin übertrug sich auf Sport und Schule.</p>
+            <ul class="text-en presentation-bullets">
+              <li>As a teenager, cricket consumed my afternoons — I played for the under 16 team representing my school in state tournaments</li>
+              <li>Cricket is a long game. It taught me to anchor when the situation calls for it, to accelerate when the moment arrives, and to trust teammates implicitly — never burning bright in a short spectacle when measured consistency wins</li>
+              <li>These principles define how I approach collaborative work today: knowing when to lead, when to support, and when to seize the opportunity</li>
+              <li>Matriculated with a perfect 10/10 CGPA; scored 94.2% in the Abitur equivalent, ranking roughly in the top 2% nationally</li>
+              <li>Took a gap year to explore options, guided by a strong interest in physics — especially electromagnetism</li>
+            </ul>
+            <ul class="text-de presentation-bullets">
+              <li>Als Teenager widmete ich meine Nachmittage dem Cricket — ich spielte für die U16-Schulmannschaft bei Staatsturnieren</li>
+              <li>Cricket ist ein langwieriges Spiel: Es lehrte mich, wann man stabilisiert, wann man beschleunigt und wann man dem Team vertraut — konstante Stärke schlägt ein kurzes Aufflackern</li>
+              <li>Diese Prinzipien prägen meine Zusammenarbeit bis heute: wissen, wann man führt, wann man unterstützt und wann man die Chance ergreift</li>
+              <li>Realschulabschluss mit perfekten 10/10 CGPA; 94,2 % im Abitur — landesweit zu den besten 2 %</li>
+              <li>Ein Gap Year zur vertieften Erkundung meiner Optionen, geleitet von starkem Interesse an Physik und Elektromagnetismus</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Slide 3: BITS Pilani -->
+        <article class="slide-card" data-index="2">
+          <span class="slide-tag">03 / 08 · <span class="text-en">The Spark</span><span class="text-de">Der Funke</span></span>
+          <h2 class="slide-title">
+            <span class="text-en">From Physics to Algorithms</span>
+            <span class="text-de">Von der Physik zu Algorithmen</span>
+          </h2>
+          <div class="slide-body">
+            <p class="slide-connector text-en">University studies shifted my focus from pure sciences to applied programming.</p>
+            <p class="slide-connector text-de">Das Universitätsstudium verlagerte meinen Fokus von reinen Naturwissenschaften zur angewandten Programmierung.</p>
+            <ul class="text-en presentation-bullets">
+              <li>Scored 348/450 in BITSAT, an entrance exam for one of the top 10 most prestigious universities in India</li>
+              <li>Joined BITS Pilani in Electrical &amp; Electronics Engineering</li>
+              <li>Academic focus shifted after taking courses in Programming, Machine Learning, and Neural Networks</li>
+              <li>Kept up sports participation by representing the university Cricket Club in regional tournaments</li>
+              <li>Graduated with an 8.12/10 CGPA, fully transitioned into software and data-driven disciplines</li>
+            </ul>
+            <ul class="text-de presentation-bullets">
+              <li>Erreichte 348/450 Punkte im BITSAT, der Aufnahmeprüfung für eine der Top-10-Universitäten in Indien</li>
+              <li>Studium an der BITS Pilani im Bereich Elektro- und Informationstechnik</li>
+              <li>Der akademische Fokus verschob sich durch Kurse in Programmierung, Machine Learning und neuronalen Netzen</li>
+              <li>Aufrechterhaltung meiner sportlichen Aktivität, indem ich den Cricket-Club der Universität bei regionalen Turnieren vertrat</li>
+              <li>Abschluss mit einem 8,12/10 CGPA und vollständiger Wechsel in datengetriebene und softwarebasierte Disziplinen</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Slide 4: HSBC -->
+        <article class="slide-card" data-index="3">
+          <span class="slide-tag">04 / 08 · <span class="text-en">Industry</span><span class="text-de">Berufserfahrung</span></span>
+          <h2 class="slide-title">
+            <span class="text-en">Translating Data into Value</span>
+            <span class="text-de">Daten in echten Geschäftswert übersetzen</span>
+          </h2>
+          <div class="slide-body">
+            <p class="slide-connector text-en">Professional experience in banking grounded theory in real-world impact.</p>
+            <p class="slide-connector text-de">Berufserfahrung im Bankensektor verankerte mein theoretisches Wissen in realen Anwendungen.</p>
+            <ul class="text-en presentation-bullets">
+              <li>Joined HSBC as a Software Engineer in the Cloud Economics team during the pandemic in 2020</li>
+              <li>Built cloud-native ETL pipelines to manage and process large-scale operational data</li>
+              <li>Expanded into statistical modeling, forecasting, and anomaly detection as my data familiarity grew</li>
+              <li>Developed models that powered executive negotiations with public cloud vendors, driving significant cost savings</li>
+              <li>Mentored two new graduates and managed day-to-day operations</li>
+            </ul>
+            <ul class="text-de presentation-bullets">
+              <li>Einstieg bei HSBC als Software Engineer im Cloud-Economics-Team während der Pandemie 2020</li>
+              <li>Entwicklung von cloud-nativen ETL-Datenpipelines zur Verarbeitung großer operativer Datenmengen</li>
+              <li>Erweiterung der Rolle auf statistische Modellierung, Prognosen und Anomalieerkennung</li>
+              <li>Entwicklung von Modellen für Verhandlungen mit Cloud-Anbietern, die zu erheblichen Kosteneinsparungen führten</li>
+              <li>Mentoring von zwei Absolventen und Übernahme der operativen Leitung</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Slide 5: Germany -->
+        <article class="slide-card" data-index="4">
+          <span class="slide-tag">05 / 08 · <span class="text-en">The Leap</span><span class="text-de">Der Aufbruch</span></span>
+          <h2 class="slide-title">
+            <span class="text-en">The Research Journey to Germany</span>
+            <span class="text-de">Die Forschungsreise nach Deutschland</span>
+          </h2>
+          <div class="slide-body">
+            <p class="slide-connector text-en">Academic ambitions led me to seek international exposure and specialized knowledge.</p>
+            <p class="slide-connector text-de">Akademische Ambitionen motivierten mich zu internationaler Erfahrung und vertieftem Wissen.</p>
+            <ul class="text-en presentation-bullets">
+              <li>A high school exchange to Japan (JENESYS) provided an early, formative international experience</li>
+              <li>Wanted to study and live abroad to gain broader international exposure and academic depth</li>
+              <li>Self-funded the move to Germany after three years at HSBC</li>
+              <li>October 2023: Began M.Sc. Quantitative Data Science Methods at the University of Tübingen</li>
+              <li>Committed to learning German, currently at B1 and working toward B2</li>
+              <li>Specializing in methods for machine learning and financial econometrics</li>
+            </ul>
+            <ul class="text-de presentation-bullets">
+              <li>Ein Schüleraustausch nach Japan (JENESYS) bot eine frühe, prägende internationale Erfahrung</li>
+              <li>Mein Ziel war es, im Ausland zu studieren und zu leben, um tiefgreifende internationale Einblicke und akademische Tiefe zu gewinnen</li>
+              <li>Nach drei Jahren bei HSBC finanzierte ich den Umzug nach Deutschland selbst</li>
+              <li>Oktober 2023: Start des M.Sc. Quantitative Data Science Methods an der Universität Tübingen</li>
+              <li>Konsequentes Deutschlernen, aktuell B1 mit dem Ziel B2</li>
+              <li>Spezialisierung auf Methoden für Machine Learning und Finanzökonometrie</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Slide 6: Europe & Finance -->
+        <article class="slide-card" data-index="5">
+          <span class="slide-tag">06 / 08 · <span class="text-en">Horizons</span><span class="text-de">Horizonte</span></span>
+          <h2 class="slide-title">
+            <span class="text-en">Experience During the Degree</span>
+            <span class="text-de">Erfahrungen während des Studiums</span>
+          </h2>
+          <div class="slide-body">
+            <p class="slide-connector text-en">Expanding academic and professional horizons across Europe.</p>
+            <p class="slide-connector text-de">Erweiterung des akademischen und beruflichen Horizonts in Europa.</p>
+            <ul class="text-en presentation-bullets">
+              <li>Erasmus exchange at KU Leuven to pursue specific courses in Financial Engineering, Asset Pricing, and Causal ML</li>
+              <li>Explored Flanders, gaining cultural enrichment through travels to Bruges, Ghent, and Brussels</li>
+              <li>Completed a quantitative internship at the Deutsche Bundesbank in Frankfurt within the Financial Stability department</li>
+              <li>Modeled investment fund portfolios under macroeconomic shocks to understand systemic risk mitigation</li>
+            </ul>
+            <ul class="text-de presentation-bullets">
+              <li>Erasmus-Austausch an der KU Leuven für spezifische Kurse in Financial Engineering, Asset Pricing und kausalem ML</li>
+              <li>Erkundung von Flandern mit kultureller Bereicherung durch Reisen nach Brügge, Gent und Brüssel</li>
+              <li>Absolvierung eines quantitativen Praktikums bei der Deutschen Bundesbank in Frankfurt im Bereich Finanzstabilität</li>
+              <li>Modellierung von Investmentfonds-Portfolios unter makroökonomischen Schocks zur Untersuchung systemischer Risikominderung</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Slide 7: Research Thesis -->
+        <article class="slide-card" data-index="6">
+          <span class="slide-tag">07 / 08 · <span class="text-en">Research</span><span class="text-de">Forschung</span></span>
+          <h2 class="slide-title">
+            <span class="text-en">Causal Discovery with Novel Quantitative Method</span>
+            <span class="text-de">Kausale Entdeckung durch neue quantitative Methoden</span>
+          </h2>
+          <div class="slide-body">
+            <p class="slide-connector text-en">My master's thesis bridges theoretical algorithms and empirical applications.</p>
+            <p class="slide-connector text-de">Meine Masterarbeit schlägt die Brücke zwischen theoretischen Algorithmen und empirischen Anwendungen.</p>
+            <ul class="text-en presentation-bullets">
+              <li>Master's Thesis at the Max Planck Institute for Intelligent Systems in collaboration with the University of Tübingen</li>
+              <li>Topic: Optimal Transport in Linear Independent Component Analysis (ICA)</li>
+              <li>Going beyond prediction to extract true causal signals hidden beneath noisy data mixtures</li>
+              <li>Building methods that are interpretable, mathematically grounded, and applicable to real-world datasets</li>
+            </ul>
+            <ul class="text-de presentation-bullets">
+              <li>Masterarbeit am Max-Planck-Institut für Intelligente Systeme in Zusammenarbeit mit der Universität Tübingen</li>
+              <li>Thema: Optimaler Transport in linearer Unabhängiger Komponentenanalyse (ICA)</li>
+              <li>Über reine Vorhersagen hinaus: Extraktion wahrer kausaler Signale aus verrauschten Datengemischen</li>
+              <li>Entwicklung von Methoden, die interpretierbar, mathematisch fundiert und auf reale Datensätze anwendbar sind</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Slide 8: Vision -->
+        <article class="slide-card" data-index="7">
+          <span class="slide-tag">08 / 08 · <span class="text-en">Vision</span><span class="text-de">Vision</span></span>
+          <h2 class="slide-title">
+            <span class="text-en">Why Hire Me for Data Science?</span>
+            <span class="text-de">Warum mich als Data Scientist einstellen?</span>
+          </h2>
+          <div class="slide-body">
+            <p class="slide-connector text-en">The hardest skill in financial data science is not building the right model. It is asking the right question for each seat at the table.</p>
+            <p class="slide-connector text-de">Die schwierigste Fähigkeit ist nicht das richtige Modell zu bauen, sondern für jeden Platz am Tisch die richtige Frage zu stellen.</p>
+            <ul class="text-en presentation-bullets">
+              <li>At HSBC, I moved fast technically on cloud cost forecasting. Then I slowed down: audit flagged that savings could not cross fiscal years, risk raised concerns about automated compute shutdown, executives needed cross-vendor benchmarks for negotiating leverage. One model, four different conversations</li>
+              <li>That taught me self-awareness as a data scientist: technical speed is a strength, but stakeholder fluency is what makes models land</li>
+              <li>Financial services is uniquely challenging because the same analysis must speak to Risk, Portfolio, Compliance, Audit, and the executive suite simultaneously</li>
+              <li>I aim to be a data scientist who builds with rigour and communicates across every function, a direct bridge between science and business</li>
+            </ul>
+            <ul class="text-de presentation-bullets">
+              <li>Bei HSBC ging ich technisch zunächst schnell vor. Dann verlangsamte ich: Audit monierte jahresübergreifende Einsparungen, Risiko äußerte Bedenken zu automatisierten Abschaltungen, Management brauchte Anbietervergleiche als Verhandlungsgrundlage. Ein Modell, vier verschiedene Gespräche</li>
+              <li>Das lehrte mich Selbstreflexion: Technische Geschwindigkeit ist eine Stärke, aber Stakeholder-Kompetenz entscheidet darüber, ob Modelle Wirkung entfalten</li>
+              <li>Finanzdienstleistungen sind einzigartig anspruchsvoll, weil dieselbe Analyse gleichzeitig Risiko, Portfolio, Compliance, Audit und Management ansprechen muss</li>
+              <li>Mein Ziel: mit Strenge entwickeln und funktionsübergreifend kommunizieren, als direkte Brücke zwischen Wissenschaft und Geschäft</li>
+            </ul>
+          </div>
+        </article>
+
+      </section>
+    </main>
+
+    <!-- Footer Navigation -->
+    <footer class="presentation-footer">
+      <button class="nav-btn prev" id="prev-btn" aria-label="Previous Slide" disabled>
+        <span class="btn-arrow">←</span>
+        <span class="text-en">Prev</span>
+        <span class="text-de">Zurück</span>
+      </button>
+      <div class="dots-indicator" id="dots-container">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
+        <span class="dot" data-slide="3"></span>
+        <span class="dot" data-slide="4"></span>
+        <span class="dot" data-slide="5"></span>
+        <span class="dot" data-slide="6"></span>
+        <span class="dot" data-slide="7"></span>
+      </div>
+      <button class="nav-btn next" id="next-btn" aria-label="Next Slide">
+        <span class="text-en">Next</span>
+        <span class="text-de">Weiter</span>
+        <span class="btn-arrow">→</span>
+      </button>
+    </footer>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const deck = document.getElementById("presentation-deck");
+      const slides = document.querySelectorAll(".slide-card");
+      const dots = document.querySelectorAll(".dot");
+      const prevBtn = document.getElementById("prev-btn");
+      const nextBtn = document.getElementById("next-btn");
+      const langToggleBtn = document.getElementById("lang-toggle-btn");
+      const minion = document.getElementById("minion-character");
+      const threadPath = document.getElementById("thread-main-path");
+      const threadBall = document.getElementById("thread-ball");
+
+      let currentIdx = 0;
+      const totalSlides = slides.length;
+
+      let pathLength = 0;
+      if (threadPath) {
+        pathLength = threadPath.getTotalLength();
+        threadPath.style.setProperty('--thread-length', pathLength);
+        threadPath.style.strokeDasharray = pathLength;
+        threadPath.style.strokeDashoffset = pathLength;
+        // Ball starts at the beginning
+        if (threadBall) {
+          const pt = threadPath.getPointAtLength(0);
+          threadBall.setAttribute('cx', pt.x);
+          threadBall.setAttribute('cy', pt.y);
+        }
+      }
+
+      function updateThread(index) {
+        if (!threadPath || pathLength === 0) return;
+        const progress = index / (totalSlides - 1);
+        const revealLength = pathLength * progress;
+        threadPath.style.strokeDashoffset = pathLength - revealLength;
+        if (threadBall) {
+          const pt = threadPath.getPointAtLength(revealLength);
+          threadBall.setAttribute('cx', pt.x);
+          threadBall.setAttribute('cy', pt.y);
+        }
+      }
+
+      function showSlide(index) {
+        if (index < 0) index = 0;
+        if (index >= totalSlides) index = totalSlides - 1;
+
+        currentIdx = index;
+        deck.className = `slide-state-${currentIdx}`;
+
+        slides.forEach((slide, idx) => {
+          slide.classList.toggle("active", idx === currentIdx);
+          slide.setAttribute("aria-hidden", idx !== currentIdx ? "true" : "false");
+        });
+
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle("active", idx === currentIdx);
+        });
+
+        if (minion) {
+          minion.classList.remove("bump");
+          void minion.offsetWidth;
+          minion.classList.add("bump");
+        }
+
+        updateThread(currentIdx);
+
+        prevBtn.disabled = (currentIdx === 0);
+        nextBtn.disabled = (currentIdx === totalSlides - 1);
+      }
+
+      function nextSlide() { if (currentIdx < totalSlides - 1) showSlide(currentIdx + 1); }
+      function prevSlide() { if (currentIdx > 0) showSlide(currentIdx - 1); }
+
+      nextBtn.addEventListener("click", nextSlide);
+      prevBtn.addEventListener("click", prevSlide);
+
+      dots.forEach((dot) => {
+        dot.addEventListener("click", (e) => {
+          showSlide(parseInt(e.target.getAttribute("data-slide"), 10));
+        });
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowRight") nextSlide();
+        else if (e.key === "ArrowLeft") prevSlide();
+        else if (e.key === " ") { e.preventDefault(); nextSlide(); }
+      });
+
+      let touchStartX = 0;
+      document.addEventListener("touchstart", (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+      document.addEventListener("touchend", (e) => {
+        const diff = e.changedTouches[0].screenX - touchStartX;
+        if (diff < -50) nextSlide();
+        if (diff > 50) prevSlide();
+      }, { passive: true });
+
+      langToggleBtn.addEventListener("click", () => {
+        document.body.classList.toggle("lang-en");
+        document.body.classList.toggle("lang-de");
+      });
+
+      showSlide(0);
+    });
+  </script>
+</body>
+</html>

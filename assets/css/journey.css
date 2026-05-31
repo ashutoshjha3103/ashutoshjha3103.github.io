@@ -1,0 +1,566 @@
+/* ==========================================================================
+   JOURNEY PRESENTATION v7
+   ========================================================================== */
+
+/* 1. RESET & THEME */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body.theme-presentation {
+  background: radial-gradient(ellipse at 40% 30%, #e8f4fd 0%, #d0ecfb 40%, #b8e2f8 100%);
+  color: #1e293b;
+  font-family: 'Outfit', sans-serif;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 2. BILINGUAL TOGGLE */
+body.lang-en .text-de { display: none !important; }
+body.lang-de .text-en { display: none !important; }
+
+/* 3. THREAD STRIP — fixed top band, ball moves along the wave */
+.background-thread-container {
+  position: fixed;
+  top: 56px;          /* sits flush below the header */
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 1;
+  pointer-events: none;
+  overflow: visible;
+}
+.background-thread-svg { width: 100%; height: 100%; }
+
+.thread-path {
+  fill: none; stroke: #34d399; stroke-width: 4; stroke-linecap: round;
+  stroke-dasharray: var(--thread-length, 2000);
+  stroke-dashoffset: var(--thread-length, 2000);
+  transition: stroke-dashoffset 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  opacity: 0.6;
+}
+.thread-path-bg {
+  fill: none; stroke: #a7f3d0; stroke-width: 3;
+  stroke-linecap: round; stroke-dasharray: 6 12; opacity: 0.35;
+}
+.thread-ball-dot {
+  transition: cx 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+              cy 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  filter: drop-shadow(0 0 5px #10b981);
+  opacity: 0.9;
+}
+
+/* 4. DECK LAYOUT */
+#presentation-deck {
+  width: 100%; height: 100%;
+  position: relative;
+  display: flex; flex-direction: column; justify-content: space-between;
+  padding: 20px 28px; z-index: 2;
+}
+
+/* 5. HEADER */
+.presentation-header {
+  height: 56px; display: flex;
+  align-items: center; justify-content: space-between; z-index: 100;
+}
+.exit-btn {
+  display: flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,0.55); border: 1px solid rgba(255,255,255,0.7);
+  padding: 9px 18px; border-radius: 50px; color: #334155;
+  text-decoration: none; font-weight: 600; font-size: 13px;
+  backdrop-filter: blur(8px); transition: all 0.2s ease;
+}
+.exit-btn:hover { background: #fff; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.guidance-hint {
+  font-size: 14px; font-weight: 600; color: #64748b; letter-spacing: 0.5px;
+  background: rgba(255,255,255,0.4); padding: 6px 16px; border-radius: 20px;
+}
+.lang-toggle {
+  display: flex; align-items: center; gap: 4px; background: #fff;
+  border: 1px solid #e2e8f0; padding: 4px; border-radius: 50px;
+  cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: all 0.2s ease;
+}
+.lang-label { padding: 6px 12px; border-radius: 40px; font-size: 12px; font-weight: 700; color: #94a3b8; transition: all 0.3s ease; }
+body.lang-en .lang-label.en-active { background: #1e293b; color: #fff; }
+body.lang-de .lang-label.de-active { background: #1e293b; color: #fff; }
+
+/* 6. MAIN CONTENT */
+.presentation-main {
+  flex-grow: 1; display: flex; align-items: center; justify-content: center;
+  max-width: 1200px; margin: 0 auto; width: 100%; position: relative;
+}
+#presentation-deck.slide-state-0 .presentation-main,
+#presentation-deck.slide-state-2 .presentation-main,
+#presentation-deck.slide-state-4 .presentation-main,
+#presentation-deck.slide-state-6 .presentation-main { flex-direction: row; }
+#presentation-deck.slide-state-1 .presentation-main,
+#presentation-deck.slide-state-3 .presentation-main,
+#presentation-deck.slide-state-5 .presentation-main,
+#presentation-deck.slide-state-7 .presentation-main { flex-direction: row-reverse; }
+
+/* 7. SLIDE CARDS */
+.slides-container {
+  flex: 1; position: relative; height: 560px;
+  display: flex; align-items: stretch; perspective: 1000px;
+}
+.slide-card {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(255,255,255,0.72); backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.85);
+  border-radius: 24px; padding: 36px 42px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.04), 0 1px 3px rgba(0,0,0,0.02);
+  display: flex; flex-direction: column;
+  opacity: 0; transform: translateX(40px) rotateY(-5deg);
+  pointer-events: none; transition: all 0.7s cubic-bezier(0.25, 1, 0.2, 1);
+}
+.slide-card.active {
+  opacity: 1; transform: translateX(0) rotateY(0deg);
+  pointer-events: auto; z-index: 10;
+}
+#presentation-deck[class*="slide-state-1"] .slide-card,
+#presentation-deck[class*="slide-state-3"] .slide-card,
+#presentation-deck[class*="slide-state-5"] .slide-card,
+#presentation-deck[class*="slide-state-7"] .slide-card { transform: translateX(-40px) rotateY(5deg); }
+#presentation-deck[class*="slide-state-1"] .slide-card.active,
+#presentation-deck[class*="slide-state-3"] .slide-card.active,
+#presentation-deck[class*="slide-state-5"] .slide-card.active,
+#presentation-deck[class*="slide-state-7"] .slide-card.active { transform: translateX(0) rotateY(0deg); }
+
+.slide-tag { font-size: 12px; font-weight: 800; color: #10b981; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 12px; display: inline-block; }
+.slide-title { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 700; color: #0f172a; line-height: 1.2; margin-bottom: 16px; }
+.slide-connector { font-size: 16px; font-weight: 600; color: #3b82f6; margin-bottom: 14px; font-style: italic; }
+
+/* slide-body fills remaining space and lets bullets scroll */
+.slide-body {
+  flex: 1;
+  display: flex; flex-direction: column;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.presentation-bullets {
+  list-style: none; display: flex; flex-direction: column; gap: 10px;
+  font-size: 15px; line-height: 1.55; color: #334155;
+  overflow-y: auto; padding-right: 8px; flex: 1; min-height: 0;
+}
+.presentation-bullets::-webkit-scrollbar { width: 4px; }
+.presentation-bullets::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+.presentation-bullets li { position: relative; padding-left: 22px; }
+.presentation-bullets li::before { content: "→"; position: absolute; left: 0; top: 0; color: #3b82f6; font-weight: bold; }
+
+/* 8. MASCOT VIEWPORT */
+.mascot-viewport { width: 420px; display: flex; justify-content: center; align-items: center; position: relative; }
+.mascot-wrapper { position: relative; display: flex; flex-direction: column; align-items: center; }
+
+/* Photo Frame — 202×232px (≈10 % smaller than 225×258) */
+@keyframes floatPhoto {
+  0%   { transform: translateY(0) rotate(-3deg); }
+  50%  { transform: translateY(-8px) rotate(-1deg); }
+  100% { transform: translateY(0) rotate(-3deg); }
+}
+.photo-frame {
+  width: 202px; height: 232px;
+  background: white; padding: 16px 16px 62px 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15); border-radius: 4px;
+  position: absolute; top: -235px;
+  left: 50%; margin-left: -101px;
+  z-index: 50; display: flex; flex-direction: column; align-items: center;
+  transform: rotate(-3deg);
+  animation: floatPhoto 4s ease-in-out infinite;
+}
+.photo-frame img {
+  width: 100%; height: 100%; object-fit: cover;
+  object-position: top center; background: #eee; border-radius: 2px;
+}
+.photo-name {
+  position: absolute; bottom: 15px;
+  font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: #111;
+}
+
+/* 9. MINION BODY */
+.mascot-minion {
+  position: relative; width: 150px; height: 240px;
+  background: #fce029; border-radius: 75px;
+  box-shadow: inset -15px -15px 20px rgba(0,0,0,0.1),
+              inset 10px 10px 20px rgba(255,255,255,0.4),
+              0 15px 30px rgba(15,23,42,0.15);
+  z-index: 10; transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.mascot-minion.bump { animation: slideBump 0.4s ease; }
+@keyframes slideBump {
+  0%   { transform: scale(1) translateY(0); }
+  50%  { transform: scale(0.95) translateY(10px); }
+  100% { transform: scale(1) translateY(0); }
+}
+
+/* Hair */
+.minion-hair { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); width: 60px; height: 20px; }
+.strand { position: absolute; bottom: 0; width: 3px; height: 18px; background: #111; border-radius: 3px; }
+.strand-1 { left: 10px; transform: rotate(-25deg); height: 14px; }
+.strand-2 { left: 25px; transform: rotate(-10deg); height: 20px; }
+.strand-3 { left: 40px; transform: rotate(15deg); height: 22px; }
+.strand-4 { left: 55px; transform: rotate(30deg); height: 15px; }
+
+/* 10. EYES */
+.minion-eyes {
+  position: absolute; top: 45px; left: -5px; right: -5px; height: 72px;
+  display: flex; justify-content: center; align-items: center; z-index: 15;
+}
+.goggle-band { position: absolute; top: 50%; transform: translateY(-50%); left: 0; right: 0; height: 16px; background: #222; box-shadow: 0 4px 6px rgba(0,0,0,0.2); z-index: 1; }
+.eye {
+  position: relative; width: 72px; height: 72px; background: #fff;
+  border-radius: 50%; border: 12px solid #ddd;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2), inset 0 4px 8px rgba(0,0,0,0.3);
+  z-index: 2; overflow: hidden; display: flex; align-items: center; justify-content: center;
+}
+.eye::before { content: ""; position: absolute; top: -12px; left: -12px; right: -12px; bottom: -12px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.8); pointer-events: none; }
+.pupil { width: 22px; height: 22px; background: #6b4423; border-radius: 50%; position: relative; transition: transform 0.2s; box-shadow: inset 0 0 4px #3e2723; }
+.pupil::after { content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 10px; height: 10px; background: #111; border-radius: 50%; }
+.pupil::before { content: ""; position: absolute; top: 4px; left: 4px; width: 4px; height: 4px; background: #fff; border-radius: 50%; z-index: 10; }
+.eyelid { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #fce029; transform: translateY(-100%); transition: transform 0.1s; box-shadow: 0 4px 4px rgba(0,0,0,0.1); }
+@keyframes blink { 0%, 96%, 100% { transform: translateY(-100%); } 98% { transform: translateY(0); } }
+.eyelid { animation: blink 5s infinite; }
+
+/* 11. MOUTHS */
+.minion-mouth { position: absolute; top: 110px; left: 50%; transform: translateX(-50%); width: 65px; height: 35px; z-index: 10; }
+.minion-mouth > div { width: 100%; height: 100%; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.2s; }
+.mouth-toothy { background: #4a1515; border-radius: 10px 10px 40px 40px; overflow: hidden; }
+.mouth-toothy .teeth { background: #fff; height: 12px; width: 100%; border-radius: 0 0 10px 10px; }
+.mouth-toothy .tongue { position: absolute; bottom: -5px; left: 50%; transform: translateX(-50%); width: 30px; height: 20px; background: #fca5a5; border-radius: 50%; }
+.mouth-peaceful { width: 30px !important; height: 10px !important; left: 50% !important; transform: translateX(-50%); border-bottom: 3px solid #333; border-radius: 0 0 20px 20px; }
+.mouth-laugh { background: #4a1515; border-radius: 50%; height: 40px !important; width: 40px !important; left: 50% !important; transform: translateX(-50%); overflow: hidden; }
+.mouth-laugh .teeth { background: #fff; height: 8px; width: 100%; }
+.mouth-laugh .tongue { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 24px; height: 16px; background: #fca5a5; border-radius: 50%; }
+.mouth-smirk { width: 25px !important; height: 10px !important; left: 60% !important; transform: translateX(-50%) rotate(-10deg); border-bottom: 3px solid #333; border-radius: 0 0 15px 15px; }
+.mouth-curious { width: 15px !important; height: 15px !important; left: 50% !important; transform: translateX(-50%); background: #333; border-radius: 50%; }
+.mouth-grin { background: #fff; border-radius: 10px 10px 30px 30px; box-shadow: inset 0 4px 6px rgba(0,0,0,0.1); }
+
+/* 12. OVERALLS — shortened so they clear the mouth (top: 110px + 35px = 145px) */
+.minion-clothes { position: absolute; bottom: 0; left: 0; width: 100%; height: 80px; z-index: 10; }
+.overalls {
+  position: absolute; bottom: 0; left: 0; width: 100%;
+  height: 62px;                           /* was 80px — now clears the mouth */
+  background: #396395; border-radius: 0 0 75px 75px;
+  box-shadow: inset -5px -5px 15px rgba(0,0,0,0.2), inset 5px 5px 10px rgba(255,255,255,0.1);
+}
+.overalls::before {
+  content: ""; position: absolute;
+  top: -16px; left: 50%; transform: translateX(-50%);
+  width: 70px; height: 20px;              /* smaller bib */
+  background: #396395; border-radius: 8px 8px 0 0;
+}
+.overalls .strap {
+  position: absolute;
+  top: -26px;                             /* raised less */
+  width: 14px; height: 26px;             /* shorter straps */
+  background: #396395; z-index: -1;
+}
+.overalls .strap.left  { left: 12px;  transform: rotate(-30deg); }
+.overalls .strap.right { right: 12px; transform: rotate(30deg);  }
+.overalls .strap::after { content: ""; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: 11px; height: 11px; background: #111; border-radius: 50%; }
+.overalls .pocket { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); width: 32px; height: 28px; border-radius: 0 0 14px 14px; background: #396395; display: flex; align-items: center; justify-content: center; box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2); }
+.pocket-logo { font-family: monospace; font-size: 13px; font-weight: bold; color: #1e3a8a; opacity: 0.6; }
+
+/* 13. ACCESSORIES */
+.accessory { position: absolute; opacity: 0; transition: opacity 0.4s ease, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1); pointer-events: none; z-index: 30; }
+
+/* ---- Slide 2: Cricket ---- */
+@keyframes batSwing {
+  0%, 100% { transform: rotate(-20deg); }
+  45%       { transform: rotate(25deg); }
+}
+.acc-cricket-bat { top: 75px; left: -68px; width: 56px; height: 168px; transform-origin: top center; transform: rotate(-20deg); }
+.bat-handle { width: 11px; height: 52px; margin: 0 auto; border-radius: 5px; background: repeating-linear-gradient(0deg, #5c3317 0px, #5c3317 3px, #9c6b3e 3px, #9c6b3e 6px); position: relative; }
+.bat-handle::after { content: ""; position: absolute; bottom: -5px; left: 50%; transform: translateX(-50%); width: 18px; height: 9px; background: #7c5230; border-radius: 3px; }
+.bat-blade { width: 52px; height: 116px; margin: 0 auto; border-radius: 7px 7px 22px 22px; background: linear-gradient(145deg, #f7eacb 0%, #ead5a0 50%, #d4b574 100%); box-shadow: inset -6px 0 10px rgba(0,0,0,0.18), inset 3px 0 6px rgba(255,255,255,0.35), 2px 4px 10px rgba(0,0,0,0.2); }
+
+.acc-cricket-ball { top: 218px; left: -68px; width: 28px; height: 28px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #ef5350, #b71c1c 60%, #7f1010); box-shadow: inset -4px -4px 8px rgba(0,0,0,0.35), 2px 3px 6px rgba(0,0,0,0.25); display: flex; align-items: center; justify-content: center; }
+.ball-seam { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 2px; height: 24px; background: rgba(255,255,255,0.7); border-radius: 1px; }
+.ball-seam::after { content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(90deg); width: 2px; height: 20px; background: rgba(255,255,255,0.45); border-radius: 1px; }
+
+.acc-wickets { top: 140px; left: -128px; width: 50px; height: 90px; display: flex; justify-content: space-between; align-items: flex-end; position: relative; }
+.stump { width: 7px; height: 86px; border-radius: 4px 4px 0 0; background: linear-gradient(180deg, #e8c87a 0%, #d4a73a 65%, #b88f2a 100%); box-shadow: 1px 0 3px rgba(0,0,0,0.2); }
+.bail { position: absolute; top: -5px; width: 20px; height: 5px; background: linear-gradient(90deg, #c4942a, #e8c87a, #c4942a); border-radius: 3px; box-shadow: 0 1px 3px rgba(0,0,0,0.25); }
+.bail1 { left: 2px; } .bail2 { right: 2px; }
+
+/* ---- Slide 3: Mortarboard cap (clear graduation symbol) ---- */
+.acc-mortarboard {
+  /* The flat board */
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 116px; height: 10px;
+  background: #1e293b;
+  border-radius: 4px;
+  z-index: 25;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  clip-path: none;
+}
+/* Dome / cap beneath the board */
+.acc-mortarboard::before {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 68px; height: 26px;
+  background: #1e293b;
+  border-radius: 34px 34px 0 0;
+}
+/* Tassel */
+.acc-mortarboard::after {
+  content: "";
+  position: absolute;
+  top: 2px; right: 12px;
+  width: 3px; height: 30px;
+  background: #fbbf24;
+  border-radius: 2px;
+  box-shadow: 0 28px 0 5px #fbbf24;
+}
+
+/* Slide 3: Graduation scroll — prominent parchment */
+.acc-scroll-slide3 {
+  top: 100px; left: -80px;
+  width: 68px; height: 85px;
+  background: linear-gradient(145deg, #fdf3dd 0%, #f5e6c8 55%, #edd5a8 100%);
+  border: 2px solid #c4a46b; border-radius: 5px;
+  box-shadow: 4px 5px 14px rgba(0,0,0,0.22); z-index: 40;
+  transform: rotate(18deg);
+}
+.acc-scroll-slide3::before {
+  content: ""; position: absolute; top: -13px; left: -5px; right: -5px; height: 24px;
+  background: linear-gradient(90deg, #ddb94a, #f0d060, #ddb94a);
+  border-radius: 12px; border: 2px solid #c4a46b; box-shadow: 0 3px 6px rgba(0,0,0,0.14);
+}
+.acc-scroll-slide3::after {
+  content: ""; position: absolute; bottom: -13px; left: -5px; right: -5px; height: 24px;
+  background: linear-gradient(90deg, #ddb94a, #f0d060, #ddb94a);
+  border-radius: 12px; border: 2px solid #c4a46b; box-shadow: 0 -2px 6px rgba(0,0,0,0.14);
+}
+
+/* ---- Slide 4: Laptop ---- */
+.acc-laptop { bottom: 22px; left: -145px; width: 105px; height: 72px; }
+.laptop-screen { width: 100%; height: 58px; background: linear-gradient(180deg, #1e293b, #0f172a); border: 3px solid #475569; border-radius: 8px 8px 0 0; color: #10b981; font-family: monospace; font-size: 11px; padding: 6px 8px; display: flex; align-items: flex-start; box-shadow: inset 0 0 20px rgba(16,185,129,0.12); }
+.laptop-base { width: 110%; height: 10px; background: #94a3b8; margin-left: -5%; border-radius: 3px 3px 8px 8px; box-shadow: 0 3px 8px rgba(0,0,0,0.25); }
+
+/* ---- Slide 5: Muffler (improved) + SVG Pretzel ---- */
+.acc-scarf {
+  /* The neck wrap */
+  top: 114px; left: -12px;
+  width: 174px; height: 26px;
+  background: repeating-linear-gradient(90deg,
+    #ef4444 0px, #ef4444 14px,
+    #fcd34d 14px, #fcd34d 28px,
+    #1a1a1a 28px, #1a1a1a 42px
+  );
+  border-radius: 13px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+/* Hanging tail — right side */
+.acc-scarf::after {
+  content: "";
+  position: absolute;
+  top: 22px; right: 30px;
+  width: 24px; height: 65px;
+  background: repeating-linear-gradient(180deg,
+    #ef4444 0px, #ef4444 10px,
+    #fcd34d 10px, #fcd34d 20px,
+    #1a1a1a 20px, #1a1a1a 30px
+  );
+  border-radius: 0 0 8px 8px;
+  box-shadow: 2px 4px 8px rgba(0,0,0,0.2);
+}
+/* Fringe tips on the tail */
+.acc-scarf::before {
+  content: "";
+  position: absolute;
+  top: 83px; right: 26px;
+  width: 32px; height: 10px;
+  background: repeating-linear-gradient(90deg,
+    #ef4444 0px, #ef4444 4px,
+    transparent 4px, transparent 8px,
+    #fcd34d 8px, #fcd34d 12px,
+    transparent 12px, transparent 16px
+  );
+}
+
+/* Pretzel — SVG is inline in HTML; just position the container */
+.acc-pretzel {
+  top: 158px; left: -80px;
+  width: 72px; height: 65px;
+}
+
+/* ---- Slide 6: Flemish greeting + Euro coin in hand ---- */
+.acc-goedendag {
+  top: 55px; left: -105px;
+  font-family: 'Outfit', sans-serif; font-size: 17px; font-weight: 800;
+  color: #1e293b;
+  background: rgba(255,255,255,0.88);
+  padding: 5px 12px; border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  white-space: nowrap; letter-spacing: 0.3px;
+  transform: rotate(-6deg);
+}
+/* Speech-bubble tail pointing right toward the minion */
+.acc-goedendag::after {
+  content: "";
+  position: absolute;
+  top: 50%; right: -8px; transform: translateY(-50%);
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 9px solid rgba(255,255,255,0.88);
+}
+
+/* Euro coin — positioned near the right glove */
+.acc-euro {
+  top: 160px; right: -42px;
+  width: 38px; height: 38px;
+  background: radial-gradient(circle at 38% 38%, #fde68a, #fbbf24 55%, #d97706);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; font-weight: bold; color: #92400e;
+  border: 3px solid #d97706;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.22), inset 0 1px 3px rgba(255,255,255,0.4);
+}
+
+/* ---- Slide 7: Data-science / causal-discovery symbols ---- */
+@keyframes mathFloat {
+  0%, 100% { transform: translateY(0) scale(1);    opacity: 0.85; }
+  50%       { transform: translateY(-9px) scale(1.12); opacity: 1;    }
+}
+.acc-math-symbols { top: 0px; left: -100px; width: 350px; height: 280px; z-index: 50; }
+.math-sym {
+  position: absolute;
+  font-family: 'Playfair Display', serif; font-weight: bold;
+  color: #1e3a8a; text-shadow: 0 2px 4px rgba(255,255,255,0.9);
+  animation: mathFloat 3s infinite ease-in-out;
+}
+/* LEFT side: optimization & statistics */
+.sym1 { top: 10px;  left: 4px;  font-size: 40px; animation-delay: 0s;   }  /* ∇  gradient */
+.sym2 { top: 98px;  left: 12px; font-size: 46px; animation-delay: 0.5s; }  /* ∫  integral */
+.sym7 { top: 200px; left: 18px; font-size: 22px; animation-delay: 0.3s; }  /* E[X] expectation */
+.sym8 { top: 152px; left: 55px; font-size: 26px; animation-delay: 0.7s; }  /* σ²  variance */
+/* RIGHT side: causal inference & ICA */
+.sym3 { top: 15px;  right: 4px;  font-size: 20px; animation-delay: 0.2s; } /* do(X) */
+.sym4 { top: 108px; right: 12px; font-size: 36px; animation-delay: 0.6s; } /* ρ   correlation */
+.sym5 { top: 192px; right: 8px;  font-size: 18px; animation-delay: 0.4s; } /* W·X=S ICA model */
+.sym6 { top: 62px;  right: 28px; font-size: 18px; animation-delay: 0.9s; } /* P(B|A) */
+
+/* ---- Slide 8: Orbiting Stakeholders — larger radius ---- */
+.acc-orbit {
+  top: 50%; left: 50%; width: 320px; height: 320px;
+  transform: translate(-50%, -50%);
+  border: 1px dashed rgba(0,0,0,0.08); border-radius: 50%;
+  animation: spin 20s linear infinite; z-index: 5;
+}
+@keyframes spin { 100% { transform: translate(-50%,-50%) rotate(360deg); } }
+.orbit-icon {
+  position: absolute; width: 50px; height: 50px;
+  background: white; border-radius: 50%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  animation: counter-spin 20s linear infinite;
+}
+@keyframes counter-spin { 100% { transform: rotate(-360deg); } }
+.orbit-icon span { font-size: 9px; font-weight: bold; margin-top: 2px; }
+.orbit-icon i { font-size: 16px; }
+/* 6 icons at radius ≈ 127px (scaled from 280→320) — center of 320px div = (160,160) */
+.orbit-icon.risk       { top: 21px;  left: 135px; }
+.orbit-icon.compliance { top: 61px;  left: 261px; }
+.orbit-icon.audit      { top: 192px; left: 261px; }
+.orbit-icon.genai      { top: 249px; left: 135px; }
+.orbit-icon.investment { top: 192px; left: 9px;   }
+.orbit-icon.customers  { top: 61px;  left: 9px;   }
+
+/* 14. LIMBS */
+.minion-limbs { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.arm { position: absolute; width: 18px; height: 110px; background: #fce029; border-radius: 9px; box-shadow: inset -3px -3px 5px rgba(0,0,0,0.15); z-index: 20; transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1); transform-origin: top center; }
+.glove { position: absolute; bottom: -12px; left: 50%; transform: translateX(-50%); width: 32px; height: 32px; background: #222; border-radius: 50%; }
+.glove::after { content: ""; position: absolute; top: 5px; right: -5px; width: 12px; height: 16px; background: #222; border-radius: 6px; }
+.left-arm  { top: 130px; left:  -12px; transform: rotate(20deg);  }
+.right-arm { top: 130px; right: -12px; transform: rotate(-20deg); }
+.right-arm .glove::after { right: auto; left: -5px; }
+.leg { position: absolute; bottom: -22px; width: 32px; height: 32px; background: #396395; z-index: 1; }
+.left-leg  { left: 35px;  }
+.right-leg { right: 35px; }
+.shoe { position: absolute; bottom: -8px; width: 46px; height: 22px; background: #111; border-radius: 12px 6px 4px 4px; }
+.left-leg  .shoe { left:  -14px; }
+.right-leg .shoe { right: -14px; border-radius: 6px 12px 4px 4px; }
+
+/* ========== 15. STATE MACHINES ========== */
+
+/* State 0: Roots — wave */
+.slide-state-0 .mouth-toothy { opacity: 1; }
+.slide-state-0 .left-arm  { transform: rotate(160deg); }
+.slide-state-0 .right-arm { transform: rotate(-20deg);  }
+
+/* State 1: Cricket — bat swings, ball + wickets on left */
+.slide-state-1 .acc-cricket-bat  { opacity: 1; animation: batSwing 2s ease-in-out infinite; }
+.slide-state-1 .acc-cricket-ball { opacity: 1; }
+.slide-state-1 .acc-wickets      { opacity: 1; }
+.slide-state-1 .mouth-grin   { opacity: 1; }
+.slide-state-1 .left-arm  { transform: rotate(95deg);  }
+.slide-state-1 .right-arm { transform: rotate(-25deg); }
+
+/* State 2: BITS — mortarboard + scroll */
+.slide-state-2 .acc-mortarboard   { opacity: 1; transform: translateX(-50%); }
+.slide-state-2 .acc-scroll-slide3 { opacity: 1; transform: rotate(18deg) translateY(-8px); }
+.slide-state-2 .mouth-laugh   { opacity: 1; }
+.slide-state-2 .left-arm  { transform: rotate(100deg);  }
+.slide-state-2 .right-arm { transform: rotate(-30deg);  }
+
+/* State 3: HSBC — laptop, arms relaxed */
+.slide-state-3 .acc-laptop   { opacity: 1; transform: translateY(-8px); }
+.slide-state-3 .mouth-smirk  { opacity: 1; }
+.slide-state-3 .left-arm  { transform: rotate(15deg);  }
+.slide-state-3 .right-arm { transform: rotate(-15deg); }
+
+/* State 4: Germany — muffler + pretzel, arms relaxed */
+.slide-state-4 .acc-scarf   { opacity: 1; transform: translateY(-8px); }
+.slide-state-4 .acc-pretzel { opacity: 1; transform: translateY(-8px); }
+.slide-state-4 .mouth-curious { opacity: 1; }
+.slide-state-4 .left-arm  { transform: rotate(12deg);  }
+.slide-state-4 .right-arm { transform: rotate(-12deg); }
+
+/* State 5: Europe/Belgium — Goedendag + euro in right hand */
+.slide-state-5 .acc-goedendag { opacity: 1; transform: rotate(-6deg) translateY(-8px); }
+.slide-state-5 .acc-euro      { opacity: 1; transform: translateY(-8px); }
+.slide-state-5 .mouth-toothy  { opacity: 1; }
+.slide-state-5 .left-arm  { transform: rotate(20deg);  }
+.slide-state-5 .right-arm { transform: rotate(55deg);  } /* extended to hold euro */
+
+/* State 6: Thesis — math symbols both sides */
+.slide-state-6 .acc-math-symbols { opacity: 1; }
+.slide-state-6 .mouth-peaceful   { opacity: 1; }
+.slide-state-6 .left-arm  { transform: rotate(20deg);  }
+.slide-state-6 .right-arm { transform: rotate(-20deg); }
+
+/* State 7: Vision — orbit, triumphant arms */
+.slide-state-7 .acc-orbit  { opacity: 1; }
+.slide-state-7 .mouth-laugh { opacity: 1; }
+.slide-state-7 .left-arm  { transform: rotate(160deg);  }
+.slide-state-7 .right-arm { transform: rotate(-160deg); }
+
+/* 16. FOOTER */
+.presentation-footer { height: 60px; display: flex; align-items: center; justify-content: space-between; z-index: 100; padding: 0 10px; }
+.nav-btn { display: flex; align-items: center; gap: 8px; background: #3b82f6; color: #fff; border: none; padding: 12px 24px; border-radius: 50px; font-family: 'Outfit', sans-serif; font-size: 15px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 14px rgba(59,130,246,0.4); transition: all 0.2s ease; }
+.nav-btn:hover:not(:disabled) { background: #2563eb; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(59,130,246,0.5); }
+.nav-btn:disabled { background: #cbd5e1; box-shadow: none; cursor: not-allowed; transform: none; }
+.btn-arrow { font-size: 18px; line-height: 1; }
+.dots-indicator { display: flex; gap: 8px; }
+.dot { width: 10px; height: 10px; border-radius: 50%; background: #94a3b8; cursor: pointer; transition: all 0.3s; }
+.dot.active { background: #3b82f6; transform: scale(1.4); }
+.dot:hover:not(.active) { background: #64748b; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .presentation-main { flex-direction: column !important; justify-content: flex-start; }
+  .mascot-viewport { transform: scale(0.6); height: 200px; margin-top: 50px; }
+  .photo-frame { top: -185px; width: 152px; height: 175px; margin-left: -76px; padding: 12px 12px 48px 12px; }
+  .photo-name { font-size: 13px; bottom: 12px; }
+  .slides-container { height: 400px; width: 100%; margin-top: 20px; }
+  .slide-card { padding: 22px; }
+  .slide-title { font-size: 22px; }
+  .slide-connector { font-size: 14px; }
+  .presentation-bullets { font-size: 13px; gap: 8px; }
+}
