@@ -5,7 +5,7 @@ permalink: /contact/
 ---
 
 <div class="contact-lead">
-  <p>I am open to discussing job opportunities, collaborations, or questions about research in quantitative data science methods. financial economics and machine learning.</p>
+  <p>I welcome discussions on research collaborations, PhD opportunities, or applications of quantitative methods in complex systems, econometrics, and machine learning.</p>
   <p>Feel free to reach out via the channels below.</p>
 </div>
 

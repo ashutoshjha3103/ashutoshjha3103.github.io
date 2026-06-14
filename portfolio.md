@@ -4,7 +4,7 @@ title: Portfolio
 permalink: /portfolio/
 ---
 
-<p>Here is a selection of my academic and technical projects:</p>
+<p>A selection of research and technical projects. Core work centres on quantitative method development; the engineering and applied projects demonstrate broader implementation capabilities.</p>
 
 <div class="project-grid">
 

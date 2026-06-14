@@ -10,39 +10,41 @@ permalink: /about/
 
 <div class="cv-intro">
   <p>
-    Ashutosh is currently pursuing a Master of Science in Quantitative Data Science Methods at the Eberhard Karls University of Tübingen. He is an engineer at heart, now focused on researching Quantitative Methods with applications in Machine Learning Foundations, Financial Economics, and Applied AI.
+    Ashutosh has completed a Master of Science in Quantitative Data Science Methods at the Eberhard Karls University of Tübingen. His research focuses on developing rigorous statistical and machine learning methods — with particular interest in causal inference, optimal transport, and probabilistic modelling — to understand the structure of complex systems.
   </p>
   <p>
-    Previously, Ashutosh spent three years as a Software Engineer at HSBC (Global Cloud Economics), where he focused on data engineering and forecasting models. He has also conducted research at the Max Planck Institute for Intelligent Systems and interned at the financial stability department of the Deutsche Bundesbank. He also participated in an Erasmus Exchange semester at Katholieke Universiteit Leuven in Belgium.
+    He has conducted research at the Max Planck Institute for Intelligent Systems, where his master's thesis applies optimal transport theory to linear Independent Component Analysis (ICA). Prior to his graduate studies, he worked three years as a Software Engineer at HSBC (Global Cloud Economics). He has also completed an internship in the financial stability department of the Deutsche Bundesbank and an Erasmus Exchange at KU Leuven, where he focused on financial econometrics and causal machine learning.
   </p>
 </div>
 
-<div class="section-title">Technical Capabilities</div>
+<div class="section-title">Skills &amp; Methods</div>
 
 <div>
-  <span class="skill-category">Languages &amp; Tools</span>
+  <span class="skill-category">Research Methods</span>
+  <span class="skill-tag">Optimal Transport</span>
+  <span class="skill-tag">Causal Inference &amp; Discovery</span>
+  <span class="skill-tag">Bayesian Methods</span>
+  <span class="skill-tag">Independent Component Analysis</span>
+  <span class="skill-tag">Econometrics</span>
+  <span class="skill-tag">Time Series Analysis</span>
+  <span class="skill-tag">Probabilistic ML</span>
+
+  <span class="skill-category">Programming &amp; Frameworks</span>
   <span class="skill-tag">Python</span>
   <span class="skill-tag">PyTorch</span>
-  <span class="skill-tag">SQL</span>
   <span class="skill-tag">R</span>
   <span class="skill-tag">MATLAB</span>
+  <span class="skill-tag">SQL</span>
   <span class="skill-tag">Git</span>
+
+  <span class="skill-category">Tools &amp; Infrastructure</span>
   <span class="skill-tag">Docker</span>
   <span class="skill-tag">FastAPI</span>
   <span class="skill-tag">LangChain</span>
   <span class="skill-tag">GCP / AWS</span>
-
-  <span class="skill-category">Domain Expertise</span>
-  <span class="skill-tag">Probabilistic ML</span>
-  <span class="skill-tag">Causal ML</span>
-  <span class="skill-tag">Financial Economics</span>
-  <span class="skill-tag">Applied NLP</span>
-  <span class="skill-tag">LLMs &amp; Agentic Systems</span>
-  <span class="skill-tag">Time Series Analysis</span>
-  <span class="skill-tag">Econometrics</span>
 </div>
 
-<div class="section-title">My Professional &amp; Academic Journey</div>
+<div class="section-title">Background</div>
 
 <div class="timeline">
 

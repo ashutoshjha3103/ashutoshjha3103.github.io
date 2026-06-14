@@ -9,7 +9,10 @@ body.theme-presentation {
   background: radial-gradient(ellipse at 40% 30%, #e8f4fd 0%, #d0ecfb 40%, #b8e2f8 100%);
   color: #1e293b;
   font-family: 'Outfit', sans-serif;
-  overflow: hidden; height: 100vh; width: 100vw;
+  overflow: hidden;
+  height: 100vh;
+  height: 100dvh;
+  width: 100vw;
   display: flex; align-items: center; justify-content: center;
 }
 
@@ -525,15 +528,51 @@ body.lang-de .lang-label.de-active { background: #1e293b; color: #fff; }
 .dot.active { background: #3b82f6; transform: scale(1.4); }
 .dot:hover:not(.active) { background: #64748b; }
 
-/* Responsive */
+/* ── Responsive ─────────────────────────────────────────────────────────── */
+
+/* Tablet / large mobile: mascot shrinks, layout stacks */
 @media (max-width: 900px) {
+  #presentation-deck { padding: 12px 16px; }
   .presentation-main { flex-direction: column !important; justify-content: flex-start; align-items: center; }
-  .mascot-viewport { transform: scale(0.6); width: 420px; height: 200px; margin-top: 50px; align-items: center; padding-bottom: 0; }
-  .photo-frame { top: -185px; width: 152px; height: 175px; margin-left: -76px; padding: 12px 12px 48px; }
-  .photo-name { font-size: 13px; bottom: 12px; }
-  .slides-container { height: 400px; width: 100%; margin-top: 20px; }
-  .slide-card { padding: 22px; }
-  .slide-title { font-size: 22px; }
+
+  /* Scale the mascot using a containing element so DOM width doesn't overflow */
+  .mascot-viewport {
+    width: 100%;
+    max-width: 420px;
+    height: 160px;
+    margin-top: 30px;
+    align-items: flex-end;
+    padding-bottom: 0;
+    overflow: visible;
+    transform: none;
+  }
+  .mascot-wrapper { transform: scale(0.55); transform-origin: center bottom; }
+
+  /* Photo frame: hide on narrow screens — it requires too much vertical space */
+  .photo-frame { display: none; }
+
+  .slides-container { height: 380px; width: 100%; margin-top: 16px; }
+  .slide-card { padding: 20px 22px; }
+  .slide-title { font-size: 21px; }
   .slide-connector { font-size: 14px; }
   .presentation-bullets { font-size: 13px; gap: 8px; }
+  .guidance-hint { display: none; }
+}
+
+/* Small phones: hide mascot entirely, give slides the full main area */
+@media (max-width: 540px) {
+  #presentation-deck { padding: 10px 12px; }
+  .mascot-viewport { display: none; }
+  .slides-container { height: auto; flex: 1; margin-top: 0; }
+  .slide-card {
+    padding: 18px 18px;
+    border-radius: 16px;
+    /* Allow content to scroll inside the card on very small phones */
+    overflow-y: auto;
+  }
+  .slide-title { font-size: 19px; margin-bottom: 10px; }
+  .slide-connector { font-size: 13px; margin-bottom: 10px; }
+  .presentation-bullets { font-size: 12.5px; gap: 7px; }
+  .nav-btn { padding: 10px 16px; font-size: 13px; }
+  .presentation-footer { height: 52px; }
 }
