@@ -13,7 +13,7 @@ permalink: /about/
     Ashutosh is a PhD student in Machine Learning at the Institute of AI, TU Braunschweig, advised by Prof. Dr. Michel Besserve. His research develops machine learning methods for understanding complex systems, with a focus on causality, in particular causal and probabilistic representation learning.
   </p>
   <p>
-    He holds a Master of Science in Quantitative Data Science Methods from the Eberhard Karls University of Tübingen. His master's thesis, conducted at the Max Planck Institute for Intelligent Systems, applied optimal transport theory to linear Independent Component Analysis and resulted in a paper at the <a href="{{ '/publications/' | relative_url }}">TPM workshop at UAI 2026</a>. Prior to his graduate studies, he worked three years as a Software Engineer at HSBC (Global Cloud Economics). He has also completed an internship in the financial stability department of the Deutsche Bundesbank and an Erasmus Exchange at KU Leuven, where he focused on financial econometrics and causal machine learning.
+    He holds a Master of Science in Quantitative Data Science Methods from the Eberhard Karls University of Tübingen. His master's thesis, conducted at the Max Planck Institute for Intelligent Systems, applied optimal transport theory to linear Independent Component Analysis and resulted in a paper at the <a href="{{ '/publications/' | relative_url }}">TPM workshop at UAI 2026</a>. Prior to his graduate studies, he worked three years as a Software Engineer at HSBC (Global Cloud Economics). He has also completed an internship in the financial stability department of the Deutsche Bundesbank and an Erasmus Exchange at KU Leuven, where he focused on econometrics and machine learning.
   </p>
 </div>
 
@@ -106,11 +106,11 @@ permalink: /about/
   <div class="timeline-item">
     <div class="timeline-content">
       <span class="badge badge-edu">Education</span>
-      <div class="role-title">Erasmus Exchange (Financial Economics &amp; ML)</div>
+      <div class="role-title">Erasmus Exchange (Econometrics &amp; ML)</div>
       <div class="org-name">KU Leuven, Belgium</div>
       <span class="time-period">Feb 2025 – June 2025</span>
       <div class="description">
-        Focused on Financial Economics, Causal Machine Learning and Financial Engineering.
+        Focused on Econometrics and Machine Learning.
       </div>
     </div>
   </div>
@@ -146,7 +146,7 @@ permalink: /about/
       <div class="org-name">Eberhard Karls Universität Tübingen</div>
       <span class="time-period">Oct 2023 – 2026</span>
       <div class="description">
-        Specializing in Econometrics, Machine Learning, and Financial Economics.
+        Specializing in Econometrics and Machine Learning.
       </div>
     </div>
   </div>
