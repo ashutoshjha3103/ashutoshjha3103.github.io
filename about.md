@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: CV
 permalink: /about/
 ---
 
@@ -10,10 +10,10 @@ permalink: /about/
 
 <div class="cv-intro">
   <p>
-    Ashutosh has completed a Master of Science in Quantitative Data Science Methods at the Eberhard Karls University of Tübingen. His research focuses on developing rigorous statistical and machine learning methods — with particular interest in causal inference, optimal transport, and probabilistic modelling — to understand the structure of complex systems.
+    Ashutosh is a PhD student in Machine Learning at the Institute of AI, TU Braunschweig, advised by Prof. Dr. Michel Besserve. His research develops methods for understanding complex systems — with particular interest in causal and probabilistic representation learning, identifiability, and optimal transport.
   </p>
   <p>
-    He has conducted research at the Max Planck Institute for Intelligent Systems, where his master's thesis applies optimal transport theory to linear Independent Component Analysis (ICA). Prior to his graduate studies, he worked three years as a Software Engineer at HSBC (Global Cloud Economics). He has also completed an internship in the financial stability department of the Deutsche Bundesbank and an Erasmus Exchange at KU Leuven, where he focused on financial econometrics and causal machine learning.
+    He holds a Master of Science in Quantitative Data Science Methods from the Eberhard Karls University of Tübingen. His master's thesis, conducted at the Max Planck Institute for Intelligent Systems, applied optimal transport theory to linear Independent Component Analysis and resulted in a paper at the <a href="{{ '/publications/' | relative_url }}">TPM workshop at UAI 2026</a>. Prior to his graduate studies, he worked three years as a Software Engineer at HSBC (Global Cloud Economics). He has also completed an internship in the financial stability department of the Deutsche Bundesbank and an Erasmus Exchange at KU Leuven, where he focused on financial econometrics and causal machine learning.
   </p>
 </div>
 
@@ -51,11 +51,25 @@ permalink: /about/
   <div class="timeline-item">
     <div class="timeline-content">
       <span class="badge badge-edu">Education</span>
+      <div class="role-title">PhD in Machine Learning</div>
+      <div class="org-name">Institute of AI, TU Braunschweig</div>
+      <span class="time-period">Sept 2026 – Present</span>
+      <div class="description">
+        Research on machine learning for complex systems and causality — <strong>causal and probabilistic representation learning</strong>, identifiability, and optimal transport, with applications in sustainable energy systems, decision sciences, econometrics, and generative AI.
+        <br>
+        <em>Advisor: Prof. Dr. Michel Besserve</em>
+      </div>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-content">
+      <span class="badge badge-edu">Education</span>
       <div class="role-title">Master Thesis: Optimal Transport in Linear ICA</div>
       <div class="org-name">Max Planck Institute for Intelligent Systems and University of Tuebingen</div>
-      <span class="time-period">Present</span>
+      <span class="time-period">Completed 2026</span>
       <div class="description">
-        Researching the application of <strong>Optimal Transport theory</strong> to linear Independent Component Analysis (ICA).
+        Applied <strong>Optimal Transport theory</strong> to linear Independent Component Analysis (ICA), introducing the OT-ICA algorithm. Resulted in a paper accepted at the <a href="{{ '/publications/' | relative_url }}">9th Workshop on Tractable Probabilistic Modeling at UAI 2026</a>.
         <br>
         <em>Supervisors: Dr. Simon Buchholz, Prof. Dr. Michel Besserve, Prof. Dr. Joachim Grammig</em>
       </div>
@@ -130,7 +144,7 @@ permalink: /about/
       <span class="badge badge-edu">Education</span>
       <div class="role-title">M.Sc. Quantitative Data Science Methods</div>
       <div class="org-name">Eberhard Karls Universität Tübingen</div>
-      <span class="time-period">Started Oct 2023</span>
+      <span class="time-period">Oct 2023 – 2026</span>
       <div class="description">
         Specializing in Econometrics, Machine Learning, and Financial Economics.
       </div>
@@ -147,48 +161,6 @@ permalink: /about/
         <ul>
           <li>Built real-time ETL pipelines (improving latency by 4x) and designed FinOps frameworks.</li>
           <li>Developed statistical models driving $500K in cloud cost savings.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-content">
-      <span class="badge badge-cert">Certifications</span>
-      <div class="role-title">Professional Certifications (2022)</div>
-      <span class="time-period">2022</span>
-      <div class="description">
-        <ul>
-          <li><strong>IBM Data Science Professional</strong> (Coursera/IBM) <br> <a href="https://coursera.org/verify/professional-cert/87ZBBTJ8QCSL" target="_blank" rel="noopener noreferrer">View Certificate</a></li>
-          <li><strong>Google Cloud Professional Data Engineer</strong> <br> <a href="https://drive.google.com/file/d/1ABUM6Pgmy_tKxYixDMoc6bOV0RdJpawh/view?usp=sharing" target="_blank" rel="noopener noreferrer">View Certificate</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-content">
-      <span class="badge badge-award">Award</span>
-      <div class="role-title">Star Performer Award</div>
-      <div class="org-name">HSBC Technology</div>
-      <span class="time-period">Q2 2021</span>
-      <div class="description">
-        Awarded for high performance in cloud billing automation.
-        <br>
-        <a href="https://drive.google.com/file/d/1llMoV5QLbmlFwYC2jtjeVHTeXbjTyQty/view?usp=sharing" target="_blank" rel="noopener noreferrer">View Award</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-content">
-      <span class="badge badge-cert">Certifications</span>
-      <div class="role-title">Professional Certifications (2021)</div>
-      <span class="time-period">2021</span>
-      <div class="description">
-        <ul>
-          <li><strong>FinOps Certified Practitioner</strong> <br> <a href="https://verify.skilljar.com/c/e9oki5d83km7" target="_blank" rel="noopener noreferrer">View Credential</a></li>
-          <li><strong>Architecting with Google Compute Engine</strong> <br> <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/Z9KAN3ZWHTQT" target="_blank" rel="noopener noreferrer">View Credential</a></li>
         </ul>
       </div>
     </div>
@@ -231,3 +203,20 @@ permalink: /about/
   </div>
 
 </div>
+
+<details class="cv-extras">
+  <summary>Certifications &amp; earlier awards</summary>
+  <div class="description">
+    <ul>
+      <li><strong>Star Performer Award</strong>, HSBC Technology (Q2 2021) — cloud billing automation. <a href="https://drive.google.com/file/d/1llMoV5QLbmlFwYC2jtjeVHTeXbjTyQty/view?usp=sharing" target="_blank" rel="noopener noreferrer">View award</a></li>
+      <li><strong>IBM Data Science Professional</strong>, Coursera/IBM (2022). <a href="https://coursera.org/verify/professional-cert/87ZBBTJ8QCSL" target="_blank" rel="noopener noreferrer">View certificate</a></li>
+      <li><strong>Google Cloud Professional Data Engineer</strong> (2022). <a href="https://drive.google.com/file/d/1ABUM6Pgmy_tKxYixDMoc6bOV0RdJpawh/view?usp=sharing" target="_blank" rel="noopener noreferrer">View certificate</a></li>
+      <li><strong>FinOps Certified Practitioner</strong> (2021). <a href="https://verify.skilljar.com/c/e9oki5d83km7" target="_blank" rel="noopener noreferrer">View credential</a></li>
+      <li><strong>Architecting with Google Compute Engine</strong> (2021). <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/Z9KAN3ZWHTQT" target="_blank" rel="noopener noreferrer">View credential</a></li>
+    </ul>
+  </div>
+</details>
+
+<p class="cv-journey-link">
+  <a href="{{ '/journey/' | relative_url }}">A more personal account of how I got here &rarr;</a>
+</p>

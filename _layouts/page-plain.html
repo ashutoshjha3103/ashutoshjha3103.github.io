@@ -1,0 +1,17 @@
+---
+layout: default
+---
+{%- comment -%}
+  Minima's `page` layout with the <h1 class="post-title"> header removed.
+
+  The home page still needs `title: Home` in its front matter so it appears in
+  `header_pages` (see _config.yml), but rendering that title as a heading above
+  the hero puts the word "Home" where a visitor's eye lands first.
+{%- endcomment -%}
+<article class="post">
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+</article>

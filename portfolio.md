@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Portfolio
+title: Projects
 permalink: /portfolio/
 ---
 
-<p>A selection of research and technical projects. Core work centres on quantitative method development; the engineering and applied projects demonstrate broader implementation capabilities.</p>
+<p>Research code, coursework and engineering projects. Peer-reviewed work lives on the <a href="{{ '/publications/' | relative_url }}">publications page</a>.</p>
 
 <div class="project-grid">
 
@@ -18,15 +18,14 @@ permalink: /portfolio/
       <span class="project-tag">ICA</span>
     </div>
     <div class="project-desc">
-      Ongoing research into applying optimal transport theory to the linear Independent Component Analysis (ICA) problem. Git repository access provided on request.
+      Implementation of <strong>OT-ICA</strong>, which measures non-Gaussianity by the squared Wasserstein distance to a standard Gaussian rather than by proxy contrast functions. Published at the TPM workshop at UAI 2026; evaluated on simulated data, EEG artifact removal, and econometric price discovery.
       <br><br>
       <em>Supervisors: Dr. Simon Buchholz, Prof. Dr. Michel Besserve, Prof. Dr. Joachim Grammig</em>
     </div>
   </div>
   <div class="project-links">
-    <a href="https://gitfront.io/r/ashutosh-jha/4gwwN1sPeeAD/ot-in-linear-ica/" target="_blank" rel="noopener noreferrer">
-      <img src="https://img.shields.io/badge/GitFront-View_Project-blue?logo=git&logoColor=white" alt="View on GitFront">
-    </a>
+    <a class="link-chip" href="{{ '/publications/' | relative_url }}">Paper</a>
+    <a class="link-chip" href="https://gitfront.io/r/ashutosh-jha/4gwwN1sPeeAD/ot-in-linear-ica/" target="_blank" rel="noopener noreferrer">GitFront</a>
   </div>
 </div>
 
@@ -44,9 +43,7 @@ permalink: /portfolio/
     </div>
   </div>
   <div class="project-links">
-    <a href="https://github.com/OSLabTools/nicetoolbox">
-      <img src="https://img.shields.io/badge/GitHub-View_Project-blue?logo=github" alt="View on GitHub" loading="lazy" decoding="async">
-    </a>
+    <a class="link-chip" href="https://github.com/OSLabTools/nicetoolbox" target="_blank" rel="noopener noreferrer">GitHub</a>
   </div>
 </div>
 
@@ -64,9 +61,7 @@ permalink: /portfolio/
     </div>
   </div>
   <div class="project-links">
-    <a href="https://github.com/ashutoshjha3103/exotic_option_pricing_fe2025">
-      <img src="https://img.shields.io/badge/GitHub-View_Project-blue?logo=github" alt="View on GitHub" loading="lazy" decoding="async">
-    </a>
+    <a class="link-chip" href="https://github.com/ashutoshjha3103/exotic_option_pricing_fe2025" target="_blank" rel="noopener noreferrer">GitHub</a>
   </div>
 </div>
 
@@ -86,9 +81,7 @@ permalink: /portfolio/
     </div>
   </div>
   <div class="project-links">
-    <a href="https://github.com/ashutoshjha3103/probabilistic_asset_pricing">
-      <img src="https://img.shields.io/badge/GitHub-View_Project-blue?logo=github" alt="View on GitHub" loading="lazy" decoding="async">
-    </a>
+    <a class="link-chip" href="https://github.com/ashutoshjha3103/probabilistic_asset_pricing" target="_blank" rel="noopener noreferrer">GitHub</a>
   </div>
 </div>
 
@@ -106,9 +99,7 @@ permalink: /portfolio/
     </div>
   </div>
   <div class="project-links">
-    <a href="https://github.com/ashutoshjha3103/cbm_asset_pricing">
-      <img src="https://img.shields.io/badge/GitHub-View_Project-blue?logo=github" alt="View on GitHub" loading="lazy" decoding="async">
-    </a>
+    <a class="link-chip" href="https://github.com/ashutoshjha3103/cbm_asset_pricing" target="_blank" rel="noopener noreferrer">GitHub</a>
   </div>
 </div>
 
@@ -126,9 +117,7 @@ permalink: /portfolio/
     </div>
   </div>
   <div class="project-links">
-    <a href="https://github.com/ashutoshjha3103/time_series_analysis_arma">
-      <img src="https://img.shields.io/badge/GitHub-View_Project-blue?logo=github" alt="View on GitHub" loading="lazy" decoding="async">
-    </a>
+    <a class="link-chip" href="https://github.com/ashutoshjha3103/time_series_analysis_arma" target="_blank" rel="noopener noreferrer">GitHub</a>
   </div>
 </div>
 
@@ -149,9 +138,7 @@ permalink: /portfolio/
     </div>
   </div>
   <div class="project-links">
-    <a href="https://github.com/ashutoshjha3103/tuebifit">
-      <img src="https://img.shields.io/badge/GitHub-View_Project-blue?logo=github" alt="View TuebiFit on GitHub" loading="lazy" decoding="async">
-    </a>
+    <a class="link-chip" href="https://github.com/ashutoshjha3103/tuebifit" target="_blank" rel="noopener noreferrer">GitHub</a>
   </div>
 </div>
 
@@ -171,9 +158,7 @@ permalink: /portfolio/
     </div>
   </div>
   <div class="project-links">
-    <a href="https://github.com/ashutoshjha3103/rdr_py">
-      <img src="https://img.shields.io/badge/GitHub-View_Project-blue?logo=github" alt="View on GitHub" loading="lazy" decoding="async">
-    </a>
+    <a class="link-chip" href="https://github.com/ashutoshjha3103/rdr_py" target="_blank" rel="noopener noreferrer">GitHub</a>
   </div>
 </div>
 

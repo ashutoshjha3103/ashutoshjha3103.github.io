@@ -1,0 +1,49 @@
+# Publications, newest first.
+#
+# To add a paper, copy an entry. Only `title`, `authors`, `venue` and `year` are
+# required — every other field is optional and is simply omitted when absent.
+#
+#   authors:   in publication order. Any name matching `author` in _config.yml
+#              is highlighted automatically.
+#   venue:     full venue name, shown on the publications page.
+#   short:     abbreviated venue, shown on the home page card. Optional.
+#   status:    small badge, e.g. "Accepted", "Preprint", "Under review". Optional.
+#   featured:  true to also show it on the home page.
+#   links:     any of arxiv / pdf / openreview / code / poster / slides.
+
+- title: "Linear Independent Component Analysis via Optimal Transport"
+  authors:
+    - Ashutosh Jha
+    - Michel Besserve
+    - Simon Buchholz
+  venue: "9th Workshop on Tractable Probabilistic Modeling (TPM), UAI 2026, Amsterdam"
+  short: "TPM @ UAI 2026"
+  year: 2026
+  status: "Accepted"
+  featured: true
+  abstract: >-
+    Linear Independent Component Analysis (ICA) recovers jointly independent source signals
+    from their linear mixtures. To achieve this, classical ICA algorithms attempt to maximize
+    non-Gaussianity, measured by negentropy, which is linked to independence by information
+    theory. Because exact negentropy optimization is intractable, they rely on proxy contrast
+    functions, such as fourth-order cumulants, and parametric log-likelihoods. We propose
+    instead to measure non-Gaussianity using the squared Wasserstein distance to a standard
+    Gaussian. We prove that the Wasserstein distance between a standard normal distribution
+    and linear projections of the data is maximized when the projection recovers an independent
+    component. Based on this observation, we propose the OT-ICA algorithm which finds this
+    projection by gradient-based optimization. Empirical evaluation on simulated data shows
+    that OT-ICA outperforms proxy-based methods for different distributions of the latent
+    variables. Application to EEG artifact removal and econometric price discovery confirm
+    OT-ICA can be used for applied ICA tasks without distributional assumptions.
+  links:
+    arxiv: "https://arxiv.org/abs/2607.14081"
+    pdf: "https://tractable-probabilistic-modeling.github.io/tpm2026/papers/GH1l6iufkk.pdf"
+    openreview: "https://openreview.net/forum?id=GH1l6iufkk"
+  bibtex: |
+    @inproceedings{jha2026linear,
+      title     = {Linear Independent Component Analysis via Optimal Transport},
+      author    = {Jha, Ashutosh and Besserve, Michel and Buchholz, Simon},
+      booktitle = {9th Workshop on Tractable Probabilistic Modeling (TPM), UAI},
+      year      = {2026},
+      url       = {https://openreview.net/forum?id=GH1l6iufkk}
+    }

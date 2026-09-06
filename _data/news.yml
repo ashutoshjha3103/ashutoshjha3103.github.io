@@ -1,0 +1,27 @@
+# News, newest first. The home page shows the most recent few.
+#
+#   date:  YYYY-MM-DD, rendered as "Sep 2026".
+#   text:  plain text; inline HTML such as <a> or <em> is allowed.
+
+- date: 2026-09-01
+  text: >-
+    Started my PhD in Machine Learning at the
+    <a href="https://www.tu-braunschweig.de/en/ai" target="_blank" rel="noopener noreferrer">Institute of AI</a>,
+    TU Braunschweig, supervised by Prof. Dr. Michel Besserve.
+
+- date: 2026-08-21
+  text: >-
+    <em>Linear Independent Component Analysis via Optimal Transport</em> was accepted at the
+    <a href="https://tractable-probabilistic-modeling.github.io/tpm2026/" target="_blank" rel="noopener noreferrer">9th
+    Workshop on Tractable Probabilistic Modeling</a> at UAI 2026 in Amsterdam.
+
+- date: 2026-07-15
+  text: >-
+    Preprint of our OT-ICA work is on
+    <a href="https://arxiv.org/abs/2607.14081" target="_blank" rel="noopener noreferrer">arXiv</a>.
+
+- date: 2026-06-01
+  text: >-
+    Completed my M.Sc. in Quantitative Data Science Methods at the University of Tübingen,
+    with a thesis on optimal transport for linear ICA at the Max Planck Institute for
+    Intelligent Systems.
