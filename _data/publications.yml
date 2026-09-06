@@ -1,7 +1,7 @@
 # Publications, newest first.
 #
 # To add a paper, copy an entry. Only `title`, `authors`, `venue` and `year` are
-# required — every other field is optional and is simply omitted when absent.
+# required. Every other field is optional and is simply omitted when absent.
 #
 #   authors:   in publication order. Any name matching `author` in _config.yml
 #              is highlighted automatically.

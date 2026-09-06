@@ -10,7 +10,7 @@ permalink: /about/
 
 <div class="cv-intro">
   <p>
-    Ashutosh is a PhD student in Machine Learning at the Institute of AI, TU Braunschweig, advised by Prof. Dr. Michel Besserve. His research develops methods for understanding complex systems — with particular interest in causal and probabilistic representation learning, identifiability, and optimal transport.
+    Ashutosh is a PhD student in Machine Learning at the Institute of AI, TU Braunschweig, advised by Prof. Dr. Michel Besserve. His research develops machine learning methods for understanding complex systems, with a focus on causality, in particular causal and probabilistic representation learning.
   </p>
   <p>
     He holds a Master of Science in Quantitative Data Science Methods from the Eberhard Karls University of Tübingen. His master's thesis, conducted at the Max Planck Institute for Intelligent Systems, applied optimal transport theory to linear Independent Component Analysis and resulted in a paper at the <a href="{{ '/publications/' | relative_url }}">TPM workshop at UAI 2026</a>. Prior to his graduate studies, he worked three years as a Software Engineer at HSBC (Global Cloud Economics). He has also completed an internship in the financial stability department of the Deutsche Bundesbank and an Erasmus Exchange at KU Leuven, where he focused on financial econometrics and causal machine learning.
@@ -55,7 +55,7 @@ permalink: /about/
       <div class="org-name">Institute of AI, TU Braunschweig</div>
       <span class="time-period">Sept 2026 – Present</span>
       <div class="description">
-        Research on machine learning for complex systems and causality — <strong>causal and probabilistic representation learning</strong>, identifiability, and optimal transport, with applications in sustainable energy systems, decision sciences, econometrics, and generative AI.
+        Machine learning for complex systems and causality, in particular <strong>causal and probabilistic representation learning</strong>, with applications in sustainable energy systems, decision sciences, econometrics, and generative AI.
         <br>
         <em>Advisor: Prof. Dr. Michel Besserve</em>
       </div>
@@ -208,7 +208,7 @@ permalink: /about/
   <summary>Certifications &amp; earlier awards</summary>
   <div class="description">
     <ul>
-      <li><strong>Star Performer Award</strong>, HSBC Technology (Q2 2021) — cloud billing automation. <a href="https://drive.google.com/file/d/1llMoV5QLbmlFwYC2jtjeVHTeXbjTyQty/view?usp=sharing" target="_blank" rel="noopener noreferrer">View award</a></li>
+      <li><strong>Star Performer Award</strong>, HSBC Technology (Q2 2021), for cloud billing automation. <a href="https://drive.google.com/file/d/1llMoV5QLbmlFwYC2jtjeVHTeXbjTyQty/view?usp=sharing" target="_blank" rel="noopener noreferrer">View award</a></li>
       <li><strong>IBM Data Science Professional</strong>, Coursera/IBM (2022). <a href="https://coursera.org/verify/professional-cert/87ZBBTJ8QCSL" target="_blank" rel="noopener noreferrer">View certificate</a></li>
       <li><strong>Google Cloud Professional Data Engineer</strong> (2022). <a href="https://drive.google.com/file/d/1ABUM6Pgmy_tKxYixDMoc6bOV0RdJpawh/view?usp=sharing" target="_blank" rel="noopener noreferrer">View certificate</a></li>
       <li><strong>FinOps Certified Practitioner</strong> (2021). <a href="https://verify.skilljar.com/c/e9oki5d83km7" target="_blank" rel="noopener noreferrer">View credential</a></li>

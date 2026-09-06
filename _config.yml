@@ -2,8 +2,8 @@ title: Ashutosh Jha
 
 # Used by jekyll-seo-tag and the site footer (keep concise).
 description: >-
-  PhD student in Machine Learning at the Institute of AI, TU Braunschweig. Causal and
-  probabilistic representation learning, identifiability, and optimal transport.
+  PhD student in Machine Learning at the Institute of AI, TU Braunschweig. Machine learning
+  for complex systems, causality, and causal and probabilistic representation learning.
 
 # String form so the Minima footer shows your name (a hash would render as {"name"=>"…"}).
 author: Ashutosh Jha
@@ -14,7 +14,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-# /journey/ is intentionally absent — the page still builds and is linked from the CV page.
+# /journey/ is intentionally absent; the page still builds and is linked from the CV page.
 header_pages:
   - index.md
   - publications.md

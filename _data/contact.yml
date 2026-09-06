@@ -1,4 +1,4 @@
-# Email is NOT stored as plain text in the built HTML — only these byte values appear.
+# Email is NOT stored as plain text in the built HTML; only these byte values appear.
 # To change it: run  python3 -c "print(list('you@example.com'.encode()))"
 # and paste the list below (keeps naive mailto scrapers from matching a full address string).
 # Current value: a.jha@tu-braunschweig.de

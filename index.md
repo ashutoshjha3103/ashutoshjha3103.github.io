@@ -8,9 +8,9 @@ permalink: /
   <div class="hero-copy">
     <span class="hero-eyebrow">PhD Student &middot; Machine Learning</span>
     <h1 class="hero-title">Hi, I'm Ashutosh Jha</h1>
-    <p class="hero-tagline">Institute of AI, TU Braunschweig — advised by Prof. Dr. Michel Besserve.</p>
+    <p class="hero-tagline">Institute of AI, TU Braunschweig. Advised by Prof. Dr. Michel Besserve.</p>
     <div class="hero-lead">
-      <p>I develop machine learning methods for understanding complex systems, with a focus on causality — in particular causal and probabilistic representation learning.</p>
+      <p>I develop machine learning methods for understanding complex systems, with a focus on causality, in particular causal and probabilistic representation learning.</p>
     </div>
     <ul class="hero-actions">
       <li><a href="{{ '/publications/' | relative_url }}">Publications</a></li>
@@ -27,16 +27,16 @@ permalink: /
 
 <div class="interest-grid">
   <div class="interest-item">
-    <h3 class="interest-title">Causal &amp; probabilistic representation learning</h3>
-    <p>Recovering the latent structure that generated the data, rather than a representation that merely predicts well.</p>
+    <h3 class="interest-title">Machine Learning for Complex Systems</h3>
+    <p>Probabilistic representation learning: models that capture the structure behind high-dimensional data instead of only predicting it.</p>
   </div>
   <div class="interest-item">
-    <h3 class="interest-title">Identifiability &amp; optimal transport</h3>
-    <p>When are latent factors recoverable at all, and what geometric objectives recover them without restrictive distributional assumptions?</p>
+    <h3 class="interest-title">Causality</h3>
+    <p>Causal representation learning: recovering the latent variables and mechanisms that generated the observations.</p>
   </div>
   <div class="interest-item">
     <h3 class="interest-title">Applications</h3>
-    <p>Sustainable energy systems, decision sciences, econometrics, and generative AI — domains where the data-generating process, not just the prediction, is what matters.</p>
+    <p>Sustainable energy systems, decision sciences, econometrics, and generative AI.</p>
   </div>
 </div>
 
