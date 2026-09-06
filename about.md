@@ -122,7 +122,7 @@ permalink: /about/
       <div class="org-name">Max Planck Institute for Intelligent Systems</div>
       <span class="time-period">July 2024 – June 2025</span>
       <div class="description">
-        Developed computer vision algorithms (emotion/head orientation) for <a href="https://github.com/OSLabTools/nicetoolbox" target="_blank" rel="noopener noreferrer">GitHub NICEToolbox</a>.
+        Integrated computer vision algorithms into software <a href="https://github.com/OSLabTools/nicetoolbox" target="_blank" rel="noopener noreferrer">GitHub NICEToolbox</a>.
       </div>
     </div>
   </div>
