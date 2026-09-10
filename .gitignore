@@ -13,3 +13,6 @@ vendor/
 # Editor
 .sass-cache/
 *.swp
+
+# LaTeX CV project (source kept locally; only the built assets/cv.pdf is committed)
+my_cv/
