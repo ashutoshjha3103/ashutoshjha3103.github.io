@@ -16,3 +16,6 @@ vendor/
 
 # LaTeX CV project (source kept locally; only the built assets/cv.pdf is committed)
 my_cv/
+
+# MPI-IS guest contract paperwork (personal documents, not part of the site)
+mpi_is_contract/
