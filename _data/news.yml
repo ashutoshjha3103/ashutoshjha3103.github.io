@@ -9,6 +9,12 @@
     <a href="https://www.tu-braunschweig.de/iai" target="_blank" rel="noopener noreferrer">Institute of AI</a>,
     TU Braunschweig, supervised by Prof. Dr. Michel Besserve.
 
+- date: 2026-08-31
+  text: >-
+    Completed my M.Sc. in Quantitative Data Science Methods at the University of Tübingen,
+    with a thesis on optimal transport for linear ICA at the Max Planck Institute for
+    Intelligent Systems.
+
 - date: 2026-08-21
   text: >-
     <em>Linear Independent Component Analysis via Optimal Transport</em> was accepted at the
@@ -19,9 +25,3 @@
   text: >-
     Preprint of our OT-ICA work is on
     <a href="https://arxiv.org/abs/2607.14081" target="_blank" rel="noopener noreferrer">arXiv</a>.
-
-- date: 2026-06-01
-  text: >-
-    Completed my M.Sc. in Quantitative Data Science Methods at the University of Tübingen,
-    with a thesis on optimal transport for linear ICA at the Max Planck Institute for
-    Intelligent Systems.

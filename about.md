@@ -144,7 +144,7 @@ permalink: /about/
       <span class="badge badge-edu">Education</span>
       <div class="role-title">M.Sc. Quantitative Data Science Methods</div>
       <div class="org-name">Eberhard Karls Universität Tübingen</div>
-      <span class="time-period">Oct 2023 – 2026</span>
+      <span class="time-period">Oct 2023 – Aug 2026</span>
       <div class="description">
         Specializing in Econometrics and Machine Learning.
       </div>
