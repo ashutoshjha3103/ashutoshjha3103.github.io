@@ -22,6 +22,22 @@ header_pages:
   - about.md
   - contact.md
 
+# Keep local working folders out of the build entirely. They are gitignored, so
+# they never reach the GitHub Actions checkout, but excluding them also stops a
+# local `jekyll build` from copying private files (e.g. a signature image) and
+# LaTeX build artifacts into _site/.
+# Re-listing Jekyll's own defaults: a custom `exclude` replaces them.
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - my_cv/
+  - mpi_is_contract/
+
 defaults:
   - scope:
       path: ""
