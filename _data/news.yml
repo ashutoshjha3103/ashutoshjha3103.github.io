@@ -11,9 +11,7 @@
 
 - date: 2026-08-31
   text: >-
-    Completed my M.Sc. in Quantitative Data Science Methods at the University of Tübingen,
-    with a thesis on optimal transport for linear ICA at the Max Planck Institute for
-    Intelligent Systems.
+    Received my M.Sc. in Quantitative Data Science Methods from the University of Tübingen.
 
 - date: 2026-08-21
   text: >-
@@ -25,3 +23,8 @@
   text: >-
     Preprint of our OT-ICA work is on
     <a href="https://arxiv.org/abs/2607.14081" target="_blank" rel="noopener noreferrer">arXiv</a>.
+
+- date: 2026-06-30
+  text: >-
+    Submitted my master's thesis, <em>Optimal Transport in linear Independent Component
+    Analysis</em>, at the Max Planck Institute for Intelligent Systems, Tübingen.

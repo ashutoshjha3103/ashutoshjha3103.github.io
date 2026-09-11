@@ -42,7 +42,7 @@ permalink: /
 
 <div class="section-title">News</div>
 
-{% include news-list.html limit=4 %}
+{% include news-list.html limit=5 %}
 
 <div class="section-title">Selected Publication</div>
 
