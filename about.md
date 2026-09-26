@@ -10,7 +10,7 @@ permalink: /about/
 
 <div class="cv-intro">
   <p>
-    Ashutosh is a PhD student in Machine Learning at the Institute of AI, TU Braunschweig, advised by Prof. Dr. Michel Besserve. His research develops machine learning methods for understanding complex systems, with a focus on causality, in particular causal and probabilistic representation learning.
+    Ashutosh is a PhD student in Machine Learning at the Institute of AI, TU Braunschweig, advised by Prof. Dr. Michel Besserve and co-supervised by Prof. Dr. Bernhard Schölkopf at the Empirical Inference department of the Max Planck Institute for Intelligent Systems, Tübingen. His research develops machine learning methods for understanding complex systems, with a focus on causality, in particular causal and probabilistic representation learning.
   </p>
   <p>
     He holds a Master of Science in Quantitative Data Science Methods from the Eberhard Karls University of Tübingen. His master's thesis, conducted at the Max Planck Institute for Intelligent Systems, applied optimal transport theory to linear Independent Component Analysis and resulted in a paper at the <a href="{{ '/publications/' | relative_url }}">TPM workshop at UAI 2026</a>. Prior to his graduate studies, he worked three years as a Software Engineer at HSBC (Global Cloud Economics). He has also completed an internship in the financial stability department of the Deutsche Bundesbank and an Erasmus Exchange at KU Leuven, where he focused on econometrics and machine learning.
@@ -57,7 +57,7 @@ permalink: /about/
       <div class="description">
         Machine learning for complex systems and causality, in particular <strong>causal and probabilistic representation learning</strong>, with applications in sustainable energy systems, decision sciences, econometrics, and generative AI.
         <br>
-        <em>Advisor: Prof. Dr. Michel Besserve</em>
+        <em>Advisors: Prof. Dr. Michel Besserve; Prof. Dr. Bernhard Schölkopf (Empirical Inference, MPI-IS Tübingen)</em>
       </div>
     </div>
   </div>

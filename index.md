@@ -8,7 +8,7 @@ permalink: /
   <div class="hero-copy">
     <span class="hero-eyebrow">PhD Student &middot; Machine Learning</span>
     <h1 class="hero-title">Hi, I'm Ashutosh Jha</h1>
-    <p class="hero-tagline">Institute of AI, TU Braunschweig. Advised by Prof. Dr. Michel Besserve.</p>
+    <p class="hero-tagline">Institute of AI, TU Braunschweig. Advised by Prof. Dr. Michel Besserve and Prof. Dr. Bernhard Schölkopf (MPI-IS).</p>
     <div class="hero-lead">
       <p>I develop machine learning methods for understanding complex systems, with a focus on causality, in particular causal and probabilistic representation learning.</p>
     </div>
