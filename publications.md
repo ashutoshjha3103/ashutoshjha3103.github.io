@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Publications
+description: Publications by Ashutosh Jha on independent component analysis, optimal transport and causal representation learning.
 permalink: /publications/
 ---
 

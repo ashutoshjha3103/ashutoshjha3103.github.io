@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Contact
+description: Get in touch with Ashutosh Jha about research collaborations and internships in causal and probabilistic machine learning.
 permalink: /contact/
 ---
 

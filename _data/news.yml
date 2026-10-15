@@ -15,22 +15,12 @@
   text: >-
     Received my M.Sc. in Quantitative Data Science Methods from the University of Tübingen.
 
-- date: 2026-08-21
-  text: >-
-    <em>Linear Independent Component Analysis via Optimal Transport</em> was presented at the
-    <a href="https://tractable-probabilistic-modeling.github.io/tpm2026/" target="_blank" rel="noopener noreferrer">9th
-    Workshop on Tractable Probabilistic Modeling</a> at UAI 2026 in Amsterdam.
-
-- date: 2026-07-15
-  text: >-
-    Preprint of our OT-ICA work is on
-    <a href="https://arxiv.org/abs/2607.14081" target="_blank" rel="noopener noreferrer">arXiv</a>.
-
 - date: 2026-07-04
   text: >-
     Our paper <em>Linear Independent Component Analysis via Optimal Transport</em> was accepted at
     the <a href="https://tractable-probabilistic-modeling.github.io/tpm2026/" target="_blank" rel="noopener noreferrer">9th
     Workshop on Tractable Probabilistic Modeling (TPM)</a> at UAI 2026.
+    Preprint on <a href="https://arxiv.org/abs/2607.14081" target="_blank" rel="noopener noreferrer">arXiv</a>.
 
 - date: 2026-06-30
   text: >-
