@@ -39,7 +39,7 @@ Params:
 
     <p class="pub-venue">
       {%- if include.compact and pub.short -%}
-        {{ pub.short }}
+        <span class="venue-chip">{{ pub.short }}</span>
       {%- else -%}
         {{ pub.venue }}
       {%- endif -%}

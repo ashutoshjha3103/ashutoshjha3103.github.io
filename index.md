@@ -12,11 +12,17 @@ permalink: /
     <div class="hero-lead">
       <p>I develop machine learning methods for understanding complex systems, with a focus on causality, in particular causal and probabilistic representation learning.</p>
     </div>
-    <ul class="hero-actions">
-      <li><a href="{{ '/publications/' | relative_url }}">Publications</a></li>
-      <li><a href="{{ '/about/' | relative_url }}">CV &amp; background</a></li>
-      <li><a href="https://scholar.google.com/citations?user=eF92eEgAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
+    <ul class="topic-chips" aria-label="Research topics">
+      <li>Causality</li>
+      <li>Representation learning</li>
+      <li>Optimal transport</li>
+      <li>Independent component analysis</li>
     </ul>
+    <div class="hero-actions">
+      <a class="btn-cv" href="{{ '/publications/' | relative_url }}">Publications</a>
+      <a class="btn-outline" href="{{ '/about/' | relative_url }}">CV &amp; background</a>
+      {% include social-icons.html %}
+    </div>
   </div>
   <div class="hero-photo-wrap">
     <img class="hero-photo" src="{{ '/assets/profile.jpg' | relative_url }}" width="220" height="220" alt="Portrait of Ashutosh Jha">

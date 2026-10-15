@@ -12,3 +12,8 @@ end
 
 # Required for Ruby 3.0+ (standard in Pop!_OS / Ubuntu)
 gem "webrick", "~> 1.7"
+
+# Ruby 3.4 moved these out of the default gems; Jekyll 4.3 still requires them.
+gem "csv"
+gem "base64"
+gem "bigdecimal"

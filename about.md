@@ -1,6 +1,7 @@
 ---
 layout: page
 title: CV
+description: Curriculum vitae of Ashutosh Jha - education, research and industry experience in machine learning, causality and econometrics.
 permalink: /about/
 ---
 
@@ -166,6 +167,9 @@ permalink: /about/
     </div>
   </div>
 
+<details class="timeline-more">
+  <summary>Show earlier experience</summary>
+
   <div class="timeline-item">
     <div class="timeline-content">
       <span class="badge badge-work">Experience</span>
@@ -189,6 +193,8 @@ permalink: /about/
       </div>
     </div>
   </div>
+
+</details>
 
   <div class="timeline-item">
     <div class="timeline-content">
@@ -216,7 +222,3 @@ permalink: /about/
     </ul>
   </div>
 </details>
-
-<p class="cv-journey-link">
-  <a href="{{ '/journey/' | relative_url }}">A more personal account of how I got here &rarr;</a>
-</p>

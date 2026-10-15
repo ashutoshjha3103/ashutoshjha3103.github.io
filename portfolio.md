@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Projects
+description: Research code, hackathon and engineering projects by Ashutosh Jha.
 permalink: /portfolio/
 ---
 
