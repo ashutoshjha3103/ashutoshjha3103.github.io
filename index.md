@@ -14,9 +14,8 @@ permalink: /
     </div>
     <ul class="topic-chips" aria-label="Research topics">
       <li>Causality</li>
-      <li>Representation learning</li>
-      <li>Optimal transport</li>
-      <li>Independent component analysis</li>
+      <li>Machine Learning</li>
+      <li>Econometrics</li>
     </ul>
     <div class="hero-actions">
       <a class="btn-cv" href="{{ '/publications/' | relative_url }}">Publications</a>
